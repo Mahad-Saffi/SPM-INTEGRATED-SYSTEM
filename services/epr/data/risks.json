@@ -1,0 +1,966 @@
+[
+  {
+    "id": "1",
+    "type": "performance",
+    "severity": "medium",
+    "description": "Task completion rate below target",
+    "employee_id": "2",
+    "project_id": null,
+    "status": "active",
+    "detected_at": "2025-11-30T20:41:10.836356",
+    "created_at": "2025-11-30T20:41:10.836367"
+  },
+  {
+    "id": "2",
+    "type": "deadline",
+    "severity": "high",
+    "description": "Project deadline at risk",
+    "employee_id": null,
+    "project_id": "3",
+    "status": "active",
+    "detected_at": "2025-12-05T20:41:10.836385",
+    "created_at": "2025-12-01T20:41:10.836395"
+  },
+  {
+    "id": "3",
+    "type": "resource",
+    "severity": "low",
+    "description": "Team member workload high",
+    "employee_id": null,
+    "project_id": null,
+    "status": "active",
+    "detected_at": "2025-12-05T20:41:10.836408",
+    "created_at": "2025-11-30T20:41:10.836416"
+  },
+  {
+    "id": "4",
+    "type": "quality",
+    "severity": "medium",
+    "description": "Code quality metrics declining",
+    "employee_id": null,
+    "project_id": null,
+    "status": "active",
+    "detected_at": "2025-12-05T20:41:10.836427",
+    "created_at": "2025-12-03T20:41:10.836435"
+  },
+  {
+    "id": "5",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T00:23:25.330212"
+  },
+  {
+    "id": "5",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T00:23:25.348066"
+  },
+  {
+    "id": "7",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T00:24:06.589599"
+  },
+  {
+    "id": "7",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T00:24:06.599651"
+  },
+  {
+    "id": "9",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T01:26:09.009587"
+  },
+  {
+    "id": "9",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T01:26:09.014272"
+  },
+  {
+    "id": "11",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T12:25:07.604195"
+  },
+  {
+    "id": "11",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T12:25:07.606106"
+  },
+  {
+    "id": "1",
+    "project_id": "1",
+    "type": "Scope creep",
+    "category": "scope",
+    "severity": "medium",
+    "description": "Risk identified: Scope creep",
+    "status": "active",
+    "created_at": "2025-11-30T15:43:01.235146"
+  },
+  {
+    "id": "2",
+    "project_id": "2",
+    "type": "Technical debt",
+    "category": "technical",
+    "severity": "low",
+    "description": "Risk identified: Technical debt",
+    "status": "active",
+    "created_at": "2025-12-04T15:43:01.235164"
+  },
+  {
+    "id": "3",
+    "project_id": "3",
+    "type": "Resource constraint",
+    "category": "resource",
+    "severity": "medium",
+    "description": "Risk identified: Resource constraint",
+    "status": "active",
+    "created_at": "2025-11-28T15:43:01.235177"
+  },
+  {
+    "id": "4",
+    "employee_id": "1",
+    "type": "Technical debt",
+    "category": "technical",
+    "severity": "low",
+    "description": "Risk for John Doe: Technical debt",
+    "status": "active",
+    "created_at": "2025-12-01T15:43:01.235194"
+  },
+  {
+    "id": "1",
+    "project_id": "1",
+    "type": "Low performance",
+    "category": "performance",
+    "severity": "medium",
+    "description": "Risk identified: Low performance",
+    "status": "active",
+    "created_at": "2025-11-30T15:43:50.249122"
+  },
+  {
+    "id": "2",
+    "project_id": "2",
+    "type": "Technical debt",
+    "category": "technical",
+    "severity": "low",
+    "description": "Risk identified: Technical debt",
+    "status": "active",
+    "created_at": "2025-12-02T15:43:50.249147"
+  },
+  {
+    "id": "3",
+    "project_id": "3",
+    "type": "High workload detected",
+    "category": "workload",
+    "severity": "high",
+    "description": "Risk identified: High workload detected",
+    "status": "active",
+    "created_at": "2025-12-01T15:43:50.249163"
+  },
+  {
+    "id": "1",
+    "project_id": "1",
+    "type": "High workload detected",
+    "category": "workload",
+    "severity": "high",
+    "description": "Risk identified: High workload detected",
+    "status": "active",
+    "created_at": "2025-11-28T15:49:27.149499"
+  },
+  {
+    "id": "2",
+    "project_id": "2",
+    "type": "Technical debt",
+    "category": "technical",
+    "severity": "low",
+    "description": "Risk identified: Technical debt",
+    "status": "active",
+    "created_at": "2025-12-05T15:49:27.149521"
+  },
+  {
+    "id": "3",
+    "project_id": "3",
+    "type": "High workload detected",
+    "category": "workload",
+    "severity": "high",
+    "description": "Risk identified: High workload detected",
+    "status": "active",
+    "created_at": "2025-11-30T15:49:27.149536"
+  },
+  {
+    "id": "4",
+    "employee_id": "2",
+    "type": "Scope creep",
+    "category": "scope",
+    "severity": "medium",
+    "description": "Risk for Jane Smith: Scope creep",
+    "status": "active",
+    "created_at": "2025-12-04T15:49:27.149554"
+  },
+  {
+    "id": "5",
+    "employee_id": "3",
+    "type": "Resource constraint",
+    "category": "resource",
+    "severity": "medium",
+    "description": "Risk for Mike Johnson: Resource constraint",
+    "status": "active",
+    "created_at": "2025-12-02T15:49:27.149571"
+  },
+  {
+    "id": "6",
+    "employee_id": "4",
+    "type": "Missed deadline",
+    "category": "deadline",
+    "severity": "high",
+    "description": "Risk for Sarah Williams: Missed deadline",
+    "status": "active",
+    "created_at": "2025-12-06T15:49:27.149587"
+  },
+  {
+    "id": "7",
+    "employee_id": "5",
+    "type": "Technical debt",
+    "category": "technical",
+    "severity": "low",
+    "description": "Risk for David Brown: Technical debt",
+    "status": "active",
+    "created_at": "2025-12-03T15:49:27.149600"
+  },
+  {
+    "id": "27",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "1",
+    "entity_type": "employee",
+    "description": "Employee John Doe has 19 assigned tasks",
+    "detected_at": "2025-12-07T17:51:54.732539"
+  },
+  {
+    "id": "27",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "3",
+    "entity_type": "employee",
+    "description": "Employee Mike Johnson has 13 assigned tasks",
+    "detected_at": "2025-12-07T17:51:54.734114"
+  },
+  {
+    "id": "27",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "employee",
+    "description": "Employee David Brown has 11 assigned tasks",
+    "detected_at": "2025-12-07T17:51:54.735149"
+  },
+  {
+    "id": "27",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "6",
+    "entity_type": "employee",
+    "description": "Employee Emily Davis has 16 assigned tasks",
+    "detected_at": "2025-12-07T17:51:54.778608"
+  },
+  {
+    "id": "27",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "8",
+    "entity_type": "employee",
+    "description": "Employee Lisa Anderson has 13 assigned tasks",
+    "detected_at": "2025-12-07T17:51:54.779739"
+  },
+  {
+    "id": "27",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-07T17:51:54.789447"
+  },
+  {
+    "id": "27",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T17:51:54.790871"
+  },
+  {
+    "id": "27",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T17:51:54.804570"
+  },
+  {
+    "id": "27",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-07T17:51:54.805690"
+  },
+  {
+    "id": "27",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T17:51:54.908109"
+  },
+  {
+    "id": "27",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T17:51:54.909331"
+  },
+  {
+    "id": "27",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-07T17:51:54.910481"
+  },
+  {
+    "id": "27",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T17:51:54.911400"
+  },
+  {
+    "id": "27",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T17:51:54.912326"
+  },
+  {
+    "id": "27",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-07T17:51:54.919865"
+  },
+  {
+    "id": "27",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T17:51:54.921436"
+  },
+  {
+    "id": "27",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T17:51:54.922584"
+  },
+  {
+    "id": "44",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "1",
+    "entity_type": "employee",
+    "description": "Employee John Doe has 19 assigned tasks",
+    "detected_at": "2025-12-07T21:45:31.314679"
+  },
+  {
+    "id": "44",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "3",
+    "entity_type": "employee",
+    "description": "Employee Mike Johnson has 13 assigned tasks",
+    "detected_at": "2025-12-07T21:45:31.369067"
+  },
+  {
+    "id": "44",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "employee",
+    "description": "Employee David Brown has 11 assigned tasks",
+    "detected_at": "2025-12-07T21:45:31.417974"
+  },
+  {
+    "id": "44",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "6",
+    "entity_type": "employee",
+    "description": "Employee Emily Davis has 16 assigned tasks",
+    "detected_at": "2025-12-07T21:45:31.433383"
+  },
+  {
+    "id": "44",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "8",
+    "entity_type": "employee",
+    "description": "Employee Lisa Anderson has 13 assigned tasks",
+    "detected_at": "2025-12-07T21:45:31.444963"
+  },
+  {
+    "id": "44",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-07T21:45:31.455397"
+  },
+  {
+    "id": "44",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T21:45:31.469019"
+  },
+  {
+    "id": "44",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T21:45:31.481136"
+  },
+  {
+    "id": "44",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-07T21:45:31.505231"
+  },
+  {
+    "id": "44",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T21:45:31.517670"
+  },
+  {
+    "id": "44",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T21:45:31.528918"
+  },
+  {
+    "id": "44",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-07T21:45:31.538399"
+  },
+  {
+    "id": "44",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T21:45:31.553022"
+  },
+  {
+    "id": "44",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T21:45:31.567514"
+  },
+  {
+    "id": "44",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-07T21:45:31.576812"
+  },
+  {
+    "id": "44",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-07T21:45:31.582633"
+  },
+  {
+    "id": "44",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-07T21:45:31.586778"
+  },
+  {
+    "id": "61",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "1",
+    "entity_type": "employee",
+    "description": "Employee John Doe has 19 assigned tasks",
+    "detected_at": "2025-12-12T22:41:15.656811"
+  },
+  {
+    "id": "61",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "3",
+    "entity_type": "employee",
+    "description": "Employee Mike Johnson has 13 assigned tasks",
+    "detected_at": "2025-12-12T22:41:15.659395"
+  },
+  {
+    "id": "61",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "employee",
+    "description": "Employee David Brown has 11 assigned tasks",
+    "detected_at": "2025-12-12T22:41:15.661404"
+  },
+  {
+    "id": "61",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "6",
+    "entity_type": "employee",
+    "description": "Employee Emily Davis has 16 assigned tasks",
+    "detected_at": "2025-12-12T22:41:15.662774"
+  },
+  {
+    "id": "61",
+    "type": "employee_overwork",
+    "category": "employee",
+    "severity": "high",
+    "entity_id": "8",
+    "entity_type": "employee",
+    "description": "Employee Lisa Anderson has 13 assigned tasks",
+    "detected_at": "2025-12-12T22:41:15.664758"
+  },
+  {
+    "id": "61",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-12T22:41:15.674234"
+  },
+  {
+    "id": "61",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-12T22:41:15.676027"
+  },
+  {
+    "id": "61",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-12T22:41:15.677614"
+  },
+  {
+    "id": "61",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-12T22:41:15.679948"
+  },
+  {
+    "id": "61",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-12T22:41:15.681598"
+  },
+  {
+    "id": "61",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-12T22:41:15.683952"
+  },
+  {
+    "id": "61",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-12T22:41:15.686975"
+  },
+  {
+    "id": "61",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-12T22:41:15.689065"
+  },
+  {
+    "id": "61",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-12T22:41:15.690345"
+  },
+  {
+    "id": "61",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "2",
+    "entity_type": "project",
+    "description": "Project Mobile App Development has low completion rate: 25.0%",
+    "detected_at": "2025-12-12T22:41:15.691588"
+  },
+  {
+    "id": "61",
+    "type": "low_completion",
+    "category": "project",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "project",
+    "description": "Project Database Migration has low completion rate: 0.0%",
+    "detected_at": "2025-12-12T22:41:15.692583"
+  },
+  {
+    "id": "61",
+    "type": "deadline_passed",
+    "category": "project",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "project",
+    "description": "Project Security Audit deadline has passed",
+    "detected_at": "2025-12-12T22:41:15.693700"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "3",
+    "entity_type": "task",
+    "description": "Task 'Write unit tests' is overdue",
+    "detected_at": "2025-12-12T22:41:15.706091"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "high",
+    "entity_id": "5",
+    "entity_type": "task",
+    "description": "Task 'Update documentation' is overdue",
+    "detected_at": "2025-12-12T22:41:15.708634"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "high",
+    "entity_id": "7",
+    "entity_type": "task",
+    "description": "Task 'Setup CI/CD pipeline' is overdue",
+    "detected_at": "2025-12-12T22:41:15.713745"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "high",
+    "entity_id": "12",
+    "entity_type": "task",
+    "description": "Task 'Deploy to staging environment' is overdue",
+    "detected_at": "2025-12-12T22:41:15.715547"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "16",
+    "entity_type": "task",
+    "description": "Task 'Setup monitoring and alerts' is overdue",
+    "detected_at": "2025-12-12T22:41:15.716786"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "18",
+    "entity_type": "task",
+    "description": "Task 'Create user documentation' is overdue",
+    "detected_at": "2025-12-12T22:41:15.718064"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "high",
+    "entity_id": "23",
+    "entity_type": "task",
+    "description": "Task 'Create admin dashboard' is overdue",
+    "detected_at": "2025-12-12T22:41:15.721539"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "high",
+    "entity_id": "27",
+    "entity_type": "task",
+    "description": "Task 'Implement real-time notifications' is overdue",
+    "detected_at": "2025-12-12T22:41:15.723014"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "5",
+    "entity_type": "task",
+    "description": "Task 'Update documentation' is overdue",
+    "detected_at": "2025-12-12T22:41:15.724461"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "high",
+    "entity_id": "12",
+    "entity_type": "task",
+    "description": "Task 'Deploy to staging environment' is overdue",
+    "detected_at": "2025-12-12T22:41:15.725937"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "16",
+    "entity_type": "task",
+    "description": "Task 'Setup monitoring and alerts' is overdue",
+    "detected_at": "2025-12-12T22:41:15.728935"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "high",
+    "entity_id": "29",
+    "entity_type": "task",
+    "description": "Task 'Create mobile responsive design' is overdue",
+    "detected_at": "2025-12-12T22:41:15.731066"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "5",
+    "entity_type": "task",
+    "description": "Task 'Update documentation' is overdue",
+    "detected_at": "2025-12-12T22:41:15.732702"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "8",
+    "entity_type": "task",
+    "description": "Task 'Optimize database queries' is overdue",
+    "detected_at": "2025-12-12T22:41:15.734665"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "11",
+    "entity_type": "task",
+    "description": "Task 'Write integration tests' is overdue",
+    "detected_at": "2025-12-12T22:41:15.738200"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "13",
+    "entity_type": "task",
+    "description": "Task 'Fix responsive design issues' is overdue",
+    "detected_at": "2025-12-12T22:41:15.740112"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "16",
+    "entity_type": "task",
+    "description": "Task 'Setup monitoring and alerts' is overdue",
+    "detected_at": "2025-12-12T22:41:15.742063"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "medium",
+    "entity_id": "17",
+    "entity_type": "task",
+    "description": "Task 'Refactor legacy code' is overdue",
+    "detected_at": "2025-12-12T22:41:15.744300"
+  },
+  {
+    "id": "61",
+    "type": "overdue_task",
+    "category": "task",
+    "severity": "high",
+    "entity_id": "29",
+    "entity_type": "task",
+    "description": "Task 'Create mobile responsive design' is overdue",
+    "detected_at": "2025-12-12T22:41:15.745763"
+  }
+]

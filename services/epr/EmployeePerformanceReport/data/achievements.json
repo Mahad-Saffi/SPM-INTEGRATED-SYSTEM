@@ -1,0 +1,1004 @@
+[
+  {
+    "id": "1_1",
+    "employee_id": "1",
+    "title": "Completed 10 tasks",
+    "description": "Achievement description for Completed 10 tasks",
+    "category": "task_completion",
+    "impact": "medium",
+    "verified": false,
+    "created_at": "2025-11-26T20:41:10.836457",
+    "updated_at": "2025-12-06T20:41:10.836467"
+  },
+  {
+    "id": "1_2",
+    "employee_id": "2",
+    "title": "Completed 10 tasks",
+    "description": "Achievement description for Completed 10 tasks",
+    "category": "task_completion",
+    "impact": "medium",
+    "verified": false,
+    "created_at": "2025-11-19T20:41:10.836498",
+    "updated_at": "2025-12-06T20:41:10.836508"
+  },
+  {
+    "id": "1_3",
+    "employee_id": "3",
+    "title": "Completed 10 tasks",
+    "description": "Achievement description for Completed 10 tasks",
+    "category": "task_completion",
+    "impact": "medium",
+    "verified": true,
+    "created_at": "2025-11-17T20:41:10.836517",
+    "updated_at": "2025-12-06T20:41:10.836525",
+    "verified_at": "2025-11-29T20:41:10.836534",
+    "verified_by": "owner@company.com"
+  },
+  {
+    "id": "2_1",
+    "employee_id": "1",
+    "title": "Project milestone reached",
+    "description": "Achievement description for Project milestone reached",
+    "category": "project_milestone",
+    "impact": "high",
+    "verified": true,
+    "created_at": "2025-11-13T20:41:10.836558",
+    "updated_at": "2025-12-06T20:41:10.836570",
+    "verified_at": "2025-12-01T20:41:10.836576",
+    "verified_by": "owner@company.com"
+  },
+  {
+    "id": "2_2",
+    "employee_id": "2",
+    "title": "Project milestone reached",
+    "description": "Achievement description for Project milestone reached",
+    "category": "project_milestone",
+    "impact": "high",
+    "verified": false,
+    "created_at": "2025-11-26T20:41:10.836596",
+    "updated_at": "2025-12-06T20:41:10.836605"
+  },
+  {
+    "id": "2_3",
+    "employee_id": "3",
+    "title": "Project milestone reached",
+    "description": "Achievement description for Project milestone reached",
+    "category": "project_milestone",
+    "impact": "high",
+    "verified": false,
+    "created_at": "2025-11-29T20:41:10.836614",
+    "updated_at": "2025-12-06T20:41:10.836628"
+  },
+  {
+    "id": "3_1",
+    "employee_id": "1",
+    "title": "Learned new framework",
+    "description": "Achievement description for Learned new framework",
+    "category": "skill_development",
+    "impact": "medium",
+    "verified": true,
+    "created_at": "2025-11-12T20:41:10.836638",
+    "updated_at": "2025-12-06T20:41:10.836647",
+    "verified_at": "2025-12-03T20:41:10.836651",
+    "verified_by": "owner@company.com"
+  },
+  {
+    "id": "3_2",
+    "employee_id": "2",
+    "title": "Learned new framework",
+    "description": "Achievement description for Learned new framework",
+    "category": "skill_development",
+    "impact": "medium",
+    "verified": true,
+    "created_at": "2025-11-28T20:41:10.836664",
+    "updated_at": "2025-12-06T20:41:10.836671",
+    "verified_at": "2025-11-30T20:41:10.836675",
+    "verified_by": "owner@company.com"
+  },
+  {
+    "id": "3_3",
+    "employee_id": "3",
+    "title": "Learned new framework",
+    "description": "Achievement description for Learned new framework",
+    "category": "skill_development",
+    "impact": "medium",
+    "verified": true,
+    "created_at": "2025-11-28T20:41:10.836692",
+    "updated_at": "2025-12-06T20:41:10.836699",
+    "verified_at": "2025-11-30T20:41:10.836704",
+    "verified_by": "owner@company.com"
+  },
+  {
+    "id": "4_1",
+    "employee_id": "1",
+    "title": "Helped team member",
+    "description": "Achievement description for Helped team member",
+    "category": "general",
+    "impact": "low",
+    "verified": true,
+    "created_at": "2025-11-09T20:41:10.836815",
+    "updated_at": "2025-12-06T20:41:10.836840",
+    "verified_at": "2025-12-01T20:41:10.836847",
+    "verified_by": "owner@company.com"
+  },
+  {
+    "id": "4_2",
+    "employee_id": "2",
+    "title": "Helped team member",
+    "description": "Achievement description for Helped team member",
+    "category": "general",
+    "impact": "low",
+    "verified": false,
+    "created_at": "2025-11-29T20:41:10.836866",
+    "updated_at": "2025-12-06T20:41:10.836874"
+  },
+  {
+    "id": "4_3",
+    "employee_id": "3",
+    "title": "Helped team member",
+    "description": "Achievement description for Helped team member",
+    "category": "general",
+    "impact": "low",
+    "verified": false,
+    "created_at": "2025-11-27T20:41:10.836884",
+    "updated_at": "2025-12-06T20:41:10.836896"
+  },
+  {
+    "id": "5_1",
+    "employee_id": "1",
+    "title": "Exceeded performance target",
+    "description": "Achievement description for Exceeded performance target",
+    "category": "performance",
+    "impact": "high",
+    "verified": false,
+    "created_at": "2025-12-01T20:41:10.836915",
+    "updated_at": "2025-12-06T20:41:10.836925"
+  },
+  {
+    "id": "5_2",
+    "employee_id": "2",
+    "title": "Exceeded performance target",
+    "description": "Achievement description for Exceeded performance target",
+    "category": "performance",
+    "impact": "high",
+    "verified": false,
+    "created_at": "2025-11-18T20:41:10.837016",
+    "updated_at": "2025-12-06T20:41:10.837032"
+  },
+  {
+    "id": "5_3",
+    "employee_id": "3",
+    "title": "Exceeded performance target",
+    "description": "Achievement description for Exceeded performance target",
+    "category": "performance",
+    "impact": "high",
+    "verified": false,
+    "created_at": "2025-11-07T20:41:10.837043",
+    "updated_at": "2025-12-06T20:41:10.837052"
+  },
+  {
+    "id": "1",
+    "employee_id": "1",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-09-17T15:43:01.234276"
+  },
+  {
+    "id": "2",
+    "employee_id": "1",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-09-26T15:43:01.234294"
+  },
+  {
+    "id": "3",
+    "employee_id": "1",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-09-08T15:43:01.234308"
+  },
+  {
+    "id": "4",
+    "employee_id": "2",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-10-17T15:43:01.234340"
+  },
+  {
+    "id": "5",
+    "employee_id": "2",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-11-20T15:43:01.234353"
+  },
+  {
+    "id": "6",
+    "employee_id": "2",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-09-14T15:43:01.234365"
+  },
+  {
+    "id": "7",
+    "employee_id": "2",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-09-19T15:43:01.234376"
+  },
+  {
+    "id": "8",
+    "employee_id": "2",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-11-18T15:43:01.234387"
+  },
+  {
+    "id": "9",
+    "employee_id": "3",
+    "title": "10 Tasks Completed",
+    "description": "Achievement: 10 Tasks Completed",
+    "category": "task_completion",
+    "impact": "medium",
+    "created_at": "2025-09-13T15:43:01.234410"
+  },
+  {
+    "id": "10",
+    "employee_id": "3",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-09-22T15:43:01.234423"
+  },
+  {
+    "id": "11",
+    "employee_id": "4",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-11-13T15:43:01.234447"
+  },
+  {
+    "id": "12",
+    "employee_id": "4",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-10-24T15:43:01.234459"
+  },
+  {
+    "id": "13",
+    "employee_id": "5",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-09-25T15:43:01.234491"
+  },
+  {
+    "id": "14",
+    "employee_id": "5",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-09-30T15:43:01.234503"
+  },
+  {
+    "id": "15",
+    "employee_id": "5",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-10-09T15:43:01.234513"
+  },
+  {
+    "id": "16",
+    "employee_id": "5",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-10-17T15:43:01.234523"
+  },
+  {
+    "id": "17",
+    "employee_id": "5",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-11-03T15:43:01.234534"
+  },
+  {
+    "id": "18",
+    "employee_id": "6",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-09-21T15:43:01.234559"
+  },
+  {
+    "id": "19",
+    "employee_id": "6",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-10-02T15:43:01.234577"
+  },
+  {
+    "id": "20",
+    "employee_id": "6",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-11-19T15:43:01.234589"
+  },
+  {
+    "id": "21",
+    "employee_id": "6",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-10-10T15:43:01.234599"
+  },
+  {
+    "id": "22",
+    "employee_id": "7",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-11-05T15:43:01.234623"
+  },
+  {
+    "id": "23",
+    "employee_id": "7",
+    "title": "10 Tasks Completed",
+    "description": "Achievement: 10 Tasks Completed",
+    "category": "task_completion",
+    "impact": "medium",
+    "created_at": "2025-10-31T15:43:01.234634"
+  },
+  {
+    "id": "24",
+    "employee_id": "7",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-10-19T15:43:01.234644"
+  },
+  {
+    "id": "25",
+    "employee_id": "7",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-11-21T15:43:01.234655"
+  },
+  {
+    "id": "26",
+    "employee_id": "8",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-09-13T15:43:01.235038"
+  },
+  {
+    "id": "27",
+    "employee_id": "8",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-09-23T15:43:01.235077"
+  },
+  {
+    "id": "28",
+    "employee_id": "8",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-11-22T15:43:01.235089"
+  },
+  {
+    "id": "29",
+    "employee_id": "8",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-10-16T15:43:01.235101"
+  },
+  {
+    "id": "30",
+    "employee_id": "8",
+    "title": "10 Tasks Completed",
+    "description": "Achievement: 10 Tasks Completed",
+    "category": "task_completion",
+    "impact": "medium",
+    "created_at": "2025-11-22T15:43:01.235122"
+  },
+  {
+    "id": "1",
+    "employee_id": "1",
+    "title": "10 Tasks Completed",
+    "description": "Achievement: 10 Tasks Completed",
+    "category": "task_completion",
+    "impact": "medium",
+    "created_at": "2025-11-24T15:43:50.248475"
+  },
+  {
+    "id": "2",
+    "employee_id": "1",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-11-02T15:43:50.248493"
+  },
+  {
+    "id": "3",
+    "employee_id": "1",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-10-08T15:43:50.248507"
+  },
+  {
+    "id": "4",
+    "employee_id": "1",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-11-23T15:43:50.248519"
+  },
+  {
+    "id": "5",
+    "employee_id": "2",
+    "title": "10 Tasks Completed",
+    "description": "Achievement: 10 Tasks Completed",
+    "category": "task_completion",
+    "impact": "medium",
+    "created_at": "2025-10-25T15:43:50.248558"
+  },
+  {
+    "id": "6",
+    "employee_id": "2",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-12-05T15:43:50.248575"
+  },
+  {
+    "id": "7",
+    "employee_id": "2",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-09-19T15:43:50.248585"
+  },
+  {
+    "id": "8",
+    "employee_id": "2",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-09-26T15:43:50.248595"
+  },
+  {
+    "id": "9",
+    "employee_id": "2",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-09-10T15:43:50.248605"
+  },
+  {
+    "id": "10",
+    "employee_id": "3",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-12-02T15:43:50.248631"
+  },
+  {
+    "id": "11",
+    "employee_id": "3",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-12-04T15:43:50.248650"
+  },
+  {
+    "id": "12",
+    "employee_id": "3",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-09-08T15:43:50.248662"
+  },
+  {
+    "id": "13",
+    "employee_id": "3",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-10-02T15:43:50.248673"
+  },
+  {
+    "id": "14",
+    "employee_id": "3",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-11-14T15:43:50.248683"
+  },
+  {
+    "id": "15",
+    "employee_id": "4",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-09-08T15:43:50.248707"
+  },
+  {
+    "id": "16",
+    "employee_id": "4",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-11-09T15:43:50.248719"
+  },
+  {
+    "id": "17",
+    "employee_id": "4",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-12-02T15:43:50.248729"
+  },
+  {
+    "id": "18",
+    "employee_id": "4",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-09-13T15:43:50.248746"
+  },
+  {
+    "id": "19",
+    "employee_id": "5",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-10-23T15:43:50.248773"
+  },
+  {
+    "id": "20",
+    "employee_id": "5",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-10-28T15:43:50.248785"
+  },
+  {
+    "id": "21",
+    "employee_id": "5",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-11-07T15:43:50.248795"
+  },
+  {
+    "id": "22",
+    "employee_id": "5",
+    "title": "10 Tasks Completed",
+    "description": "Achievement: 10 Tasks Completed",
+    "category": "task_completion",
+    "impact": "medium",
+    "created_at": "2025-10-27T15:43:50.248805"
+  },
+  {
+    "id": "23",
+    "employee_id": "5",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-09-26T15:43:50.248816"
+  },
+  {
+    "id": "24",
+    "employee_id": "6",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-09-16T15:43:50.248838"
+  },
+  {
+    "id": "25",
+    "employee_id": "6",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-09-21T15:43:50.248850"
+  },
+  {
+    "id": "26",
+    "employee_id": "6",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-11-24T15:43:50.248861"
+  },
+  {
+    "id": "27",
+    "employee_id": "7",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-11-20T15:43:50.248983"
+  },
+  {
+    "id": "28",
+    "employee_id": "7",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-09-11T15:43:50.249006"
+  },
+  {
+    "id": "29",
+    "employee_id": "7",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-10-12T15:43:50.249026"
+  },
+  {
+    "id": "30",
+    "employee_id": "8",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-09-20T15:43:50.249060"
+  },
+  {
+    "id": "31",
+    "employee_id": "8",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-10-16T15:43:50.249082"
+  },
+  {
+    "id": "1",
+    "employee_id": "1",
+    "title": "10 Tasks Completed",
+    "description": "Achievement: 10 Tasks Completed",
+    "category": "task_completion",
+    "impact": "medium",
+    "created_at": "2025-11-03T15:49:27.149051"
+  },
+  {
+    "id": "2",
+    "employee_id": "1",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-10-31T15:49:27.149068"
+  },
+  {
+    "id": "3",
+    "employee_id": "1",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-11-04T15:49:27.149082"
+  },
+  {
+    "id": "4",
+    "employee_id": "1",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-11-30T15:49:27.149093"
+  },
+  {
+    "id": "5",
+    "employee_id": "1",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-10-26T15:49:27.149104"
+  },
+  {
+    "id": "6",
+    "employee_id": "2",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-10-06T15:49:27.149136"
+  },
+  {
+    "id": "7",
+    "employee_id": "2",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-11-30T15:49:27.149148"
+  },
+  {
+    "id": "8",
+    "employee_id": "2",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-09-23T15:49:27.149159"
+  },
+  {
+    "id": "9",
+    "employee_id": "3",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-10-27T15:49:27.149184"
+  },
+  {
+    "id": "10",
+    "employee_id": "3",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-10-03T15:49:27.149195"
+  },
+  {
+    "id": "11",
+    "employee_id": "3",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-09-22T15:49:27.149206"
+  },
+  {
+    "id": "12",
+    "employee_id": "3",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-12-06T15:49:27.149217"
+  },
+  {
+    "id": "13",
+    "employee_id": "4",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-11-29T15:49:27.149239"
+  },
+  {
+    "id": "14",
+    "employee_id": "4",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-10-30T15:49:27.149250"
+  },
+  {
+    "id": "15",
+    "employee_id": "5",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-10-19T15:49:27.149273"
+  },
+  {
+    "id": "16",
+    "employee_id": "5",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-09-11T15:49:27.149285"
+  },
+  {
+    "id": "17",
+    "employee_id": "5",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-10-06T15:49:27.149296"
+  },
+  {
+    "id": "18",
+    "employee_id": "6",
+    "title": "10 Tasks Completed",
+    "description": "Achievement: 10 Tasks Completed",
+    "category": "task_completion",
+    "impact": "medium",
+    "created_at": "2025-10-17T15:49:27.149320"
+  },
+  {
+    "id": "19",
+    "employee_id": "6",
+    "title": "50 Tasks Completed",
+    "description": "Achievement: 50 Tasks Completed",
+    "category": "task_completion",
+    "impact": "high",
+    "created_at": "2025-11-10T15:49:27.149331"
+  },
+  {
+    "id": "20",
+    "employee_id": "6",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-12-06T15:49:27.149342"
+  },
+  {
+    "id": "21",
+    "employee_id": "6",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-11-24T15:49:27.149358"
+  },
+  {
+    "id": "22",
+    "employee_id": "7",
+    "title": "Quick Learner",
+    "description": "Achievement: Quick Learner",
+    "category": "skills",
+    "impact": "low",
+    "created_at": "2025-09-17T15:49:27.149382"
+  },
+  {
+    "id": "23",
+    "employee_id": "7",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-11-15T15:49:27.149393"
+  },
+  {
+    "id": "24",
+    "employee_id": "7",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-11-26T15:49:27.149404"
+  },
+  {
+    "id": "25",
+    "employee_id": "7",
+    "title": "Team Player",
+    "description": "Achievement: Team Player",
+    "category": "collaboration",
+    "impact": "medium",
+    "created_at": "2025-12-04T15:49:27.149415"
+  },
+  {
+    "id": "26",
+    "employee_id": "8",
+    "title": "Project Champion",
+    "description": "Achievement: Project Champion",
+    "category": "project",
+    "impact": "high",
+    "created_at": "2025-12-01T15:49:27.149445"
+  },
+  {
+    "id": "27",
+    "employee_id": "8",
+    "title": "Top Performer",
+    "description": "Achievement: Top Performer",
+    "category": "performance",
+    "impact": "high",
+    "created_at": "2025-11-26T15:49:27.149459"
+  },
+  {
+    "id": "28",
+    "employee_id": "8",
+    "title": "First Task Completed",
+    "description": "Achievement: First Task Completed",
+    "category": "task_completion",
+    "impact": "low",
+    "created_at": "2025-11-19T15:49:27.149470"
+  },
+  {
+    "id": "29",
+    "employee_id": "8",
+    "title": "Perfect Attendance",
+    "description": "Achievement: Perfect Attendance",
+    "category": "attendance",
+    "impact": "medium",
+    "created_at": "2025-10-31T15:49:27.149480"
+  },
+  {
+    "id": "ach_106_20251207232800",
+    "employee_id": "1",
+    "title": "sss",
+    "description": "ss",
+    "category": "project_milestone",
+    "related_task_id": null,
+    "related_project_id": null,
+    "impact": "medium",
+    "verified": false,
+    "verified_by": null,
+    "verified_at": null,
+    "created_at": "2025-12-07T23:28:00.642160",
+    "updated_at": "2025-12-07T23:28:00.642170"
+  }
+]

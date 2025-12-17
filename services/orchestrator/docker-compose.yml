@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres-pm
+    environment:
+      POSTGRES_DB: project_management
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secure_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - pm-network
+
+  orchestrator:
+    build:
+      context: ./orchestrator
+      dockerfile: Dockerfile
+    container_name: orchestrator
+    ports:
+      - "9000:9000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://admin:secure_password@postgres:5432/project_management
+      JWT_SECRET: your-secret-key-change-in-production
+      SERVICE_SECRET: shared-secret-token
+      ATLAS_SERVICE_URL: http://atlas:8000
+      WORKPULSE_SERVICE_URL: http://workpulse:8001
+      EPR_SERVICE_URL: http://epr:8003
+      LABS_SERVICE_URL: http://labs:8004
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - pm-network
+
+volumes:
+  postgres_data:
+
+networks:
+  pm-network:
+    driver: bridge

@@ -1,0 +1,479 @@
+[
+  {
+    "id": "1",
+    "employee_id": "1",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-11-07T15:43:01.246161"
+  },
+  {
+    "id": "2",
+    "employee_id": "1",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-10-23T15:43:01.246186"
+  },
+  {
+    "id": "3",
+    "employee_id": "2",
+    "badge_type": "goal_achiever",
+    "badge_name": "🎯 Goal Achiever",
+    "badge_emoji": "🎯",
+    "reason": "Earned 🎯 Goal Achiever badge",
+    "awarded_at": "2025-11-08T15:43:01.246218"
+  },
+  {
+    "id": "4",
+    "employee_id": "2",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-11-23T15:43:01.246238"
+  },
+  {
+    "id": "5",
+    "employee_id": "3",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-11-22T15:43:01.246262"
+  },
+  {
+    "id": "6",
+    "employee_id": "4",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-10-27T15:43:01.246288"
+  },
+  {
+    "id": "7",
+    "employee_id": "4",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-11-27T15:43:01.246307"
+  },
+  {
+    "id": "8",
+    "employee_id": "4",
+    "badge_type": "skill_expert",
+    "badge_name": "🎓 Skill Expert",
+    "badge_emoji": "🎓",
+    "reason": "Earned 🎓 Skill Expert badge",
+    "awarded_at": "2025-10-14T15:43:01.246320"
+  },
+  {
+    "id": "9",
+    "employee_id": "5",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-11-08T15:43:01.246346"
+  },
+  {
+    "id": "10",
+    "employee_id": "5",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-10-13T15:43:01.246360"
+  },
+  {
+    "id": "11",
+    "employee_id": "5",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-11-29T15:43:01.246373"
+  },
+  {
+    "id": "12",
+    "employee_id": "6",
+    "badge_type": "attendance_star",
+    "badge_name": "📅 Attendance Star",
+    "badge_emoji": "📅",
+    "reason": "Earned 📅 Attendance Star badge",
+    "awarded_at": "2025-11-20T15:43:01.246398"
+  },
+  {
+    "id": "13",
+    "employee_id": "6",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-11-01T15:43:01.246411"
+  },
+  {
+    "id": "14",
+    "employee_id": "6",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-11-11T15:43:01.246423"
+  },
+  {
+    "id": "15",
+    "employee_id": "7",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-10-26T15:43:01.246447"
+  },
+  {
+    "id": "16",
+    "employee_id": "7",
+    "badge_type": "goal_achiever",
+    "badge_name": "🎯 Goal Achiever",
+    "badge_emoji": "🎯",
+    "reason": "Earned 🎯 Goal Achiever badge",
+    "awarded_at": "2025-10-31T15:43:01.246460"
+  },
+  {
+    "id": "17",
+    "employee_id": "8",
+    "badge_type": "goal_achiever",
+    "badge_name": "🎯 Goal Achiever",
+    "badge_emoji": "🎯",
+    "reason": "Earned 🎯 Goal Achiever badge",
+    "awarded_at": "2025-10-16T15:43:01.246485"
+  },
+  {
+    "id": "18",
+    "employee_id": "8",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-10-18T15:43:01.246499"
+  },
+  {
+    "id": "19",
+    "employee_id": "8",
+    "badge_type": "skill_expert",
+    "badge_name": "🎓 Skill Expert",
+    "badge_emoji": "🎓",
+    "reason": "Earned 🎓 Skill Expert badge",
+    "awarded_at": "2025-10-13T15:43:01.246512"
+  },
+  {
+    "id": "1",
+    "employee_id": "1",
+    "badge_type": "goal_achiever",
+    "badge_name": "🎯 Goal Achiever",
+    "badge_emoji": "🎯",
+    "reason": "Earned 🎯 Goal Achiever badge",
+    "awarded_at": "2025-11-14T15:43:50.265638"
+  },
+  {
+    "id": "2",
+    "employee_id": "1",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-10-11T15:43:50.265660"
+  },
+  {
+    "id": "3",
+    "employee_id": "1",
+    "badge_type": "skill_expert",
+    "badge_name": "🎓 Skill Expert",
+    "badge_emoji": "🎓",
+    "reason": "Earned 🎓 Skill Expert badge",
+    "awarded_at": "2025-11-29T15:43:50.265677"
+  },
+  {
+    "id": "4",
+    "employee_id": "2",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-11-03T15:43:50.265707"
+  },
+  {
+    "id": "5",
+    "employee_id": "2",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-12-05T15:43:50.265725"
+  },
+  {
+    "id": "6",
+    "employee_id": "2",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-10-31T15:43:50.265738"
+  },
+  {
+    "id": "7",
+    "employee_id": "3",
+    "badge_type": "attendance_star",
+    "badge_name": "📅 Attendance Star",
+    "badge_emoji": "📅",
+    "reason": "Earned 📅 Attendance Star badge",
+    "awarded_at": "2025-11-20T15:43:50.265770"
+  },
+  {
+    "id": "8",
+    "employee_id": "4",
+    "badge_type": "goal_achiever",
+    "badge_name": "🎯 Goal Achiever",
+    "badge_emoji": "🎯",
+    "reason": "Earned 🎯 Goal Achiever badge",
+    "awarded_at": "2025-12-06T15:43:50.265792"
+  },
+  {
+    "id": "9",
+    "employee_id": "4",
+    "badge_type": "attendance_star",
+    "badge_name": "📅 Attendance Star",
+    "badge_emoji": "📅",
+    "reason": "Earned 📅 Attendance Star badge",
+    "awarded_at": "2025-10-22T15:43:50.265804"
+  },
+  {
+    "id": "10",
+    "employee_id": "4",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-10-24T15:43:50.265817"
+  },
+  {
+    "id": "11",
+    "employee_id": "5",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-11-10T15:43:50.265839"
+  },
+  {
+    "id": "12",
+    "employee_id": "5",
+    "badge_type": "team_player",
+    "badge_name": "🏆 Best Team Player",
+    "badge_emoji": "🏆",
+    "reason": "Earned 🏆 Best Team Player badge",
+    "awarded_at": "2025-11-18T15:43:50.265852"
+  },
+  {
+    "id": "13",
+    "employee_id": "6",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-10-31T15:43:50.265873"
+  },
+  {
+    "id": "14",
+    "employee_id": "6",
+    "badge_type": "team_player",
+    "badge_name": "🏆 Best Team Player",
+    "badge_emoji": "🏆",
+    "reason": "Earned 🏆 Best Team Player badge",
+    "awarded_at": "2025-10-12T15:43:50.265906"
+  },
+  {
+    "id": "15",
+    "employee_id": "7",
+    "badge_type": "attendance_star",
+    "badge_name": "📅 Attendance Star",
+    "badge_emoji": "📅",
+    "reason": "Earned 📅 Attendance Star badge",
+    "awarded_at": "2025-10-22T15:43:50.265929"
+  },
+  {
+    "id": "16",
+    "employee_id": "7",
+    "badge_type": "goal_achiever",
+    "badge_name": "🎯 Goal Achiever",
+    "badge_emoji": "🎯",
+    "reason": "Earned 🎯 Goal Achiever badge",
+    "awarded_at": "2025-10-11T15:43:50.265941"
+  },
+  {
+    "id": "17",
+    "employee_id": "7",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-11-20T15:43:50.265952"
+  },
+  {
+    "id": "18",
+    "employee_id": "8",
+    "badge_type": "skill_expert",
+    "badge_name": "🎓 Skill Expert",
+    "badge_emoji": "🎓",
+    "reason": "Earned 🎓 Skill Expert badge",
+    "awarded_at": "2025-12-01T15:43:50.265972"
+  },
+  {
+    "id": "1",
+    "employee_id": "1",
+    "badge_type": "attendance_star",
+    "badge_name": "📅 Attendance Star",
+    "badge_emoji": "📅",
+    "reason": "Earned 📅 Attendance Star badge",
+    "awarded_at": "2025-10-26T15:49:27.160988"
+  },
+  {
+    "id": "2",
+    "employee_id": "2",
+    "badge_type": "attendance_star",
+    "badge_name": "📅 Attendance Star",
+    "badge_emoji": "📅",
+    "reason": "Earned 📅 Attendance Star badge",
+    "awarded_at": "2025-11-16T15:49:27.161020"
+  },
+  {
+    "id": "3",
+    "employee_id": "2",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-10-31T15:49:27.161034"
+  },
+  {
+    "id": "4",
+    "employee_id": "3",
+    "badge_type": "team_player",
+    "badge_name": "🏆 Best Team Player",
+    "badge_emoji": "🏆",
+    "reason": "Earned 🏆 Best Team Player badge",
+    "awarded_at": "2025-11-02T15:49:27.161059"
+  },
+  {
+    "id": "5",
+    "employee_id": "4",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-10-27T15:49:27.161084"
+  },
+  {
+    "id": "6",
+    "employee_id": "4",
+    "badge_type": "skill_expert",
+    "badge_name": "🎓 Skill Expert",
+    "badge_emoji": "🎓",
+    "reason": "Earned 🎓 Skill Expert badge",
+    "awarded_at": "2025-10-12T15:49:27.161096"
+  },
+  {
+    "id": "7",
+    "employee_id": "4",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-10-15T15:49:27.161108"
+  },
+  {
+    "id": "8",
+    "employee_id": "5",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-10-17T15:49:27.161129"
+  },
+  {
+    "id": "9",
+    "employee_id": "5",
+    "badge_type": "attendance_star",
+    "badge_name": "📅 Attendance Star",
+    "badge_emoji": "📅",
+    "reason": "Earned 📅 Attendance Star badge",
+    "awarded_at": "2025-11-01T15:49:27.161141"
+  },
+  {
+    "id": "10",
+    "employee_id": "6",
+    "badge_type": "team_player",
+    "badge_name": "🏆 Best Team Player",
+    "badge_emoji": "🏆",
+    "reason": "Earned 🏆 Best Team Player badge",
+    "awarded_at": "2025-11-30T15:49:27.161164"
+  },
+  {
+    "id": "11",
+    "employee_id": "6",
+    "badge_type": "top_performer",
+    "badge_name": "⭐ Top Performer",
+    "badge_emoji": "⭐",
+    "reason": "Earned ⭐ Top Performer badge",
+    "awarded_at": "2025-12-03T15:49:27.161176"
+  },
+  {
+    "id": "12",
+    "employee_id": "6",
+    "badge_type": "on_time_master",
+    "badge_name": "⏰ On-Time Master",
+    "badge_emoji": "⏰",
+    "reason": "Earned ⏰ On-Time Master badge",
+    "awarded_at": "2025-10-30T15:49:27.161191"
+  },
+  {
+    "id": "13",
+    "employee_id": "7",
+    "badge_type": "feedback_champion",
+    "badge_name": "💬 Feedback Champion",
+    "badge_emoji": "💬",
+    "reason": "Earned 💬 Feedback Champion badge",
+    "awarded_at": "2025-11-03T15:49:27.161215"
+  },
+  {
+    "id": "14",
+    "employee_id": "7",
+    "badge_type": "team_player",
+    "badge_name": "🏆 Best Team Player",
+    "badge_emoji": "🏆",
+    "reason": "Earned 🏆 Best Team Player badge",
+    "awarded_at": "2025-11-30T15:49:27.161227"
+  },
+  {
+    "id": "15",
+    "employee_id": "7",
+    "badge_type": "skill_expert",
+    "badge_name": "🎓 Skill Expert",
+    "badge_emoji": "🎓",
+    "reason": "Earned 🎓 Skill Expert badge",
+    "awarded_at": "2025-10-19T15:49:27.161239"
+  },
+  {
+    "id": "16",
+    "employee_id": "8",
+    "badge_type": "skill_expert",
+    "badge_name": "🎓 Skill Expert",
+    "badge_emoji": "🎓",
+    "reason": "Earned 🎓 Skill Expert badge",
+    "awarded_at": "2025-12-02T15:49:27.161259"
+  }
+]

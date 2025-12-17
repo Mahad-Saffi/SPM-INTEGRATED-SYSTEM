@@ -1,0 +1,1325 @@
+[
+  {
+    "id": "1",
+    "employee_id": "1",
+    "reviewer_id": "1",
+    "reviewer_type": "self",
+    "rating": 80.79,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-08T15:43:01.245230"
+  },
+  {
+    "id": "2",
+    "employee_id": "1",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 76.17,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-21T15:43:01.245264"
+  },
+  {
+    "id": "3",
+    "employee_id": "1",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 93.6,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-24T15:43:01.245281"
+  },
+  {
+    "id": "4",
+    "employee_id": "1",
+    "reviewer_id": "1",
+    "reviewer_type": "self",
+    "rating": 76.51,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-07T15:43:01.245298"
+  },
+  {
+    "id": "5",
+    "employee_id": "1",
+    "reviewer_id": "5",
+    "reviewer_type": "peer",
+    "rating": 77.43,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-09T15:43:01.245323"
+  },
+  {
+    "id": "6",
+    "employee_id": "1",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 80.06,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-12T15:43:01.245339"
+  },
+  {
+    "id": "7",
+    "employee_id": "2",
+    "reviewer_id": "2",
+    "reviewer_type": "self",
+    "rating": 82.29,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-28T15:43:01.245358"
+  },
+  {
+    "id": "8",
+    "employee_id": "2",
+    "reviewer_id": "6",
+    "reviewer_type": "peer",
+    "rating": 89.56,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-09T15:43:01.245378"
+  },
+  {
+    "id": "9",
+    "employee_id": "2",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 80.13,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-18T15:43:01.245392"
+  },
+  {
+    "id": "10",
+    "employee_id": "3",
+    "reviewer_id": "3",
+    "reviewer_type": "self",
+    "rating": 79.43,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-18T15:43:01.245409"
+  },
+  {
+    "id": "11",
+    "employee_id": "3",
+    "reviewer_id": "2",
+    "reviewer_type": "peer",
+    "rating": 86.07,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-08T15:43:01.245427"
+  },
+  {
+    "id": "12",
+    "employee_id": "3",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 91.54,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-02T15:43:01.245442"
+  },
+  {
+    "id": "13",
+    "employee_id": "3",
+    "reviewer_id": "3",
+    "reviewer_type": "self",
+    "rating": 75.97,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-24T15:43:01.245455"
+  },
+  {
+    "id": "14",
+    "employee_id": "3",
+    "reviewer_id": "2",
+    "reviewer_type": "peer",
+    "rating": 94.4,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-07T15:43:01.245473"
+  },
+  {
+    "id": "15",
+    "employee_id": "3",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 71.98,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-17T15:43:01.245487"
+  },
+  {
+    "id": "16",
+    "employee_id": "4",
+    "reviewer_id": "4",
+    "reviewer_type": "self",
+    "rating": 77.06,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-28T15:43:01.245505"
+  },
+  {
+    "id": "17",
+    "employee_id": "4",
+    "reviewer_id": "8",
+    "reviewer_type": "peer",
+    "rating": 85.56,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-15T15:43:01.245544"
+  },
+  {
+    "id": "18",
+    "employee_id": "4",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 91.48,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-20T15:43:01.245559"
+  },
+  {
+    "id": "19",
+    "employee_id": "5",
+    "reviewer_id": "5",
+    "reviewer_type": "self",
+    "rating": 76.72,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-28T15:43:01.245583"
+  },
+  {
+    "id": "20",
+    "employee_id": "5",
+    "reviewer_id": "6",
+    "reviewer_type": "peer",
+    "rating": 86.54,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-09T15:43:01.245603"
+  },
+  {
+    "id": "21",
+    "employee_id": "5",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 87.89,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-18T15:43:01.245616"
+  },
+  {
+    "id": "22",
+    "employee_id": "5",
+    "reviewer_id": "5",
+    "reviewer_type": "self",
+    "rating": 83.02,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-12-01T15:43:01.245629"
+  },
+  {
+    "id": "23",
+    "employee_id": "5",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 65.68,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-18T15:43:01.245648"
+  },
+  {
+    "id": "24",
+    "employee_id": "5",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 78.98,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-14T15:43:01.245662"
+  },
+  {
+    "id": "25",
+    "employee_id": "5",
+    "reviewer_id": "5",
+    "reviewer_type": "self",
+    "rating": 83.56,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-15T15:43:01.245675"
+  },
+  {
+    "id": "26",
+    "employee_id": "5",
+    "reviewer_id": "7",
+    "reviewer_type": "peer",
+    "rating": 94.29,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-25T15:43:01.245694"
+  },
+  {
+    "id": "27",
+    "employee_id": "5",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 73.65,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-19T15:43:01.245708"
+  },
+  {
+    "id": "28",
+    "employee_id": "6",
+    "reviewer_id": "6",
+    "reviewer_type": "self",
+    "rating": 85.22,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-09T15:43:01.245731"
+  },
+  {
+    "id": "29",
+    "employee_id": "6",
+    "reviewer_id": "7",
+    "reviewer_type": "peer",
+    "rating": 85.76,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-21T15:43:01.245751"
+  },
+  {
+    "id": "30",
+    "employee_id": "6",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 93.8,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-01T15:43:01.245766"
+  },
+  {
+    "id": "31",
+    "employee_id": "6",
+    "reviewer_id": "6",
+    "reviewer_type": "self",
+    "rating": 70.23,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-15T15:43:01.245785"
+  },
+  {
+    "id": "32",
+    "employee_id": "6",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 70.54,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-12-05T15:43:01.245805"
+  },
+  {
+    "id": "33",
+    "employee_id": "6",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 82.65,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-19T15:43:01.245818"
+  },
+  {
+    "id": "34",
+    "employee_id": "7",
+    "reviewer_id": "7",
+    "reviewer_type": "self",
+    "rating": 80.6,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-12-06T15:43:01.245836"
+  },
+  {
+    "id": "35",
+    "employee_id": "7",
+    "reviewer_id": "5",
+    "reviewer_type": "peer",
+    "rating": 74.55,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-14T15:43:01.245856"
+  },
+  {
+    "id": "36",
+    "employee_id": "7",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 86.41,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-09T15:43:01.245870"
+  },
+  {
+    "id": "37",
+    "employee_id": "7",
+    "reviewer_id": "7",
+    "reviewer_type": "self",
+    "rating": 72.57,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-11T15:43:01.245883"
+  },
+  {
+    "id": "38",
+    "employee_id": "7",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 75.32,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-20T15:43:01.245902"
+  },
+  {
+    "id": "39",
+    "employee_id": "7",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 85.42,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-29T15:43:01.245921"
+  },
+  {
+    "id": "40",
+    "employee_id": "7",
+    "reviewer_id": "7",
+    "reviewer_type": "self",
+    "rating": 89.09,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-28T15:43:01.245935"
+  },
+  {
+    "id": "41",
+    "employee_id": "7",
+    "reviewer_id": "8",
+    "reviewer_type": "peer",
+    "rating": 93.38,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-11T15:43:01.245954"
+  },
+  {
+    "id": "42",
+    "employee_id": "7",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 88.41,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-04T15:43:01.245968"
+  },
+  {
+    "id": "43",
+    "employee_id": "8",
+    "reviewer_id": "8",
+    "reviewer_type": "self",
+    "rating": 83.75,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-26T15:43:01.245986"
+  },
+  {
+    "id": "44",
+    "employee_id": "8",
+    "reviewer_id": "5",
+    "reviewer_type": "peer",
+    "rating": 67.99,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-12-01T15:43:01.246005"
+  },
+  {
+    "id": "45",
+    "employee_id": "8",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 73.55,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-11T15:43:01.246019"
+  },
+  {
+    "id": "46",
+    "employee_id": "8",
+    "reviewer_id": "8",
+    "reviewer_type": "self",
+    "rating": 77.85,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-25T15:43:01.246033"
+  },
+  {
+    "id": "47",
+    "employee_id": "8",
+    "reviewer_id": "1",
+    "reviewer_type": "peer",
+    "rating": 76.68,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-12-03T15:43:01.246051"
+  },
+  {
+    "id": "48",
+    "employee_id": "8",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 79.75,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-24T15:43:01.246065"
+  },
+  {
+    "id": "49",
+    "employee_id": "8",
+    "reviewer_id": "8",
+    "reviewer_type": "self",
+    "rating": 88.39,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-08T15:43:01.246079"
+  },
+  {
+    "id": "50",
+    "employee_id": "8",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 71.27,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-12-02T15:43:01.246098"
+  },
+  {
+    "id": "51",
+    "employee_id": "8",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 78.66,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-13T15:43:01.246111"
+  },
+  {
+    "id": "1",
+    "employee_id": "1",
+    "reviewer_id": "1",
+    "reviewer_type": "self",
+    "rating": 73.84,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-15T15:43:50.264906"
+  },
+  {
+    "id": "2",
+    "employee_id": "1",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 87.81,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-26T15:43:50.264948"
+  },
+  {
+    "id": "3",
+    "employee_id": "1",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 87.61,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-12T15:43:50.264962"
+  },
+  {
+    "id": "4",
+    "employee_id": "1",
+    "reviewer_id": "1",
+    "reviewer_type": "self",
+    "rating": 80.6,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-15T15:43:50.264977"
+  },
+  {
+    "id": "5",
+    "employee_id": "1",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 75.4,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-10T15:43:50.264998"
+  },
+  {
+    "id": "6",
+    "employee_id": "1",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 77.9,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-06T15:43:50.265013"
+  },
+  {
+    "id": "7",
+    "employee_id": "1",
+    "reviewer_id": "1",
+    "reviewer_type": "self",
+    "rating": 78.39,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-29T15:43:50.265026"
+  },
+  {
+    "id": "8",
+    "employee_id": "1",
+    "reviewer_id": "5",
+    "reviewer_type": "peer",
+    "rating": 85.33,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-30T15:43:50.265044"
+  },
+  {
+    "id": "9",
+    "employee_id": "1",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 78.7,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-20T15:43:50.265056"
+  },
+  {
+    "id": "10",
+    "employee_id": "2",
+    "reviewer_id": "2",
+    "reviewer_type": "self",
+    "rating": 71.09,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-12-06T15:43:50.265074"
+  },
+  {
+    "id": "11",
+    "employee_id": "2",
+    "reviewer_id": "7",
+    "reviewer_type": "peer",
+    "rating": 65.7,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-26T15:43:50.265097"
+  },
+  {
+    "id": "12",
+    "employee_id": "2",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 87.15,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-21T15:43:50.265110"
+  },
+  {
+    "id": "13",
+    "employee_id": "2",
+    "reviewer_id": "2",
+    "reviewer_type": "self",
+    "rating": 74.92,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-10T15:43:50.265122"
+  },
+  {
+    "id": "14",
+    "employee_id": "2",
+    "reviewer_id": "8",
+    "reviewer_type": "peer",
+    "rating": 93.79,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-12-01T15:43:50.265139"
+  },
+  {
+    "id": "15",
+    "employee_id": "2",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 81.34,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-11T15:43:50.265151"
+  },
+  {
+    "id": "16",
+    "employee_id": "3",
+    "reviewer_id": "3",
+    "reviewer_type": "self",
+    "rating": 72.89,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-27T15:43:50.265166"
+  },
+  {
+    "id": "17",
+    "employee_id": "3",
+    "reviewer_id": "6",
+    "reviewer_type": "peer",
+    "rating": 66.87,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-22T15:43:50.265183"
+  },
+  {
+    "id": "18",
+    "employee_id": "3",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 72.0,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-28T15:43:50.265196"
+  },
+  {
+    "id": "19",
+    "employee_id": "3",
+    "reviewer_id": "3",
+    "reviewer_type": "self",
+    "rating": 80.89,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-11T15:43:50.265209"
+  },
+  {
+    "id": "20",
+    "employee_id": "3",
+    "reviewer_id": "7",
+    "reviewer_type": "peer",
+    "rating": 94.24,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-09T15:43:50.265227"
+  },
+  {
+    "id": "21",
+    "employee_id": "3",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 93.41,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-02T15:43:50.265237"
+  },
+  {
+    "id": "22",
+    "employee_id": "4",
+    "reviewer_id": "4",
+    "reviewer_type": "self",
+    "rating": 78.66,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-18T15:43:50.265252"
+  },
+  {
+    "id": "23",
+    "employee_id": "4",
+    "reviewer_id": "5",
+    "reviewer_type": "peer",
+    "rating": 82.08,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-27T15:43:50.265269"
+  },
+  {
+    "id": "24",
+    "employee_id": "4",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 76.74,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-07T15:43:50.265281"
+  },
+  {
+    "id": "25",
+    "employee_id": "5",
+    "reviewer_id": "5",
+    "reviewer_type": "self",
+    "rating": 78.26,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-15T15:43:50.265296"
+  },
+  {
+    "id": "26",
+    "employee_id": "5",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 70.79,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-23T15:43:50.265314"
+  },
+  {
+    "id": "27",
+    "employee_id": "5",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 82.69,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-08T15:43:50.265326"
+  },
+  {
+    "id": "28",
+    "employee_id": "5",
+    "reviewer_id": "5",
+    "reviewer_type": "self",
+    "rating": 78.91,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-13T15:43:50.265339"
+  },
+  {
+    "id": "29",
+    "employee_id": "5",
+    "reviewer_id": "2",
+    "reviewer_type": "peer",
+    "rating": 65.03,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-10T15:43:50.265356"
+  },
+  {
+    "id": "30",
+    "employee_id": "5",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 83.94,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-04T15:43:50.265367"
+  },
+  {
+    "id": "31",
+    "employee_id": "6",
+    "reviewer_id": "6",
+    "reviewer_type": "self",
+    "rating": 73.52,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-14T15:43:50.265389"
+  },
+  {
+    "id": "32",
+    "employee_id": "6",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 88.76,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-30T15:43:50.265407"
+  },
+  {
+    "id": "33",
+    "employee_id": "6",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 84.16,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-12T15:43:50.265419"
+  },
+  {
+    "id": "34",
+    "employee_id": "7",
+    "reviewer_id": "7",
+    "reviewer_type": "self",
+    "rating": 70.84,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-28T15:43:50.265435"
+  },
+  {
+    "id": "35",
+    "employee_id": "7",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 84.67,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-22T15:43:50.265452"
+  },
+  {
+    "id": "36",
+    "employee_id": "7",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 79.51,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-17T15:43:50.265469"
+  },
+  {
+    "id": "37",
+    "employee_id": "7",
+    "reviewer_id": "7",
+    "reviewer_type": "self",
+    "rating": 89.03,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-07T15:43:50.265483"
+  },
+  {
+    "id": "38",
+    "employee_id": "7",
+    "reviewer_id": "8",
+    "reviewer_type": "peer",
+    "rating": 79.08,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-12-01T15:43:50.265500"
+  },
+  {
+    "id": "39",
+    "employee_id": "7",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 82.06,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-14T15:43:50.265512"
+  },
+  {
+    "id": "40",
+    "employee_id": "7",
+    "reviewer_id": "7",
+    "reviewer_type": "self",
+    "rating": 75.71,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-12-01T15:43:50.265524"
+  },
+  {
+    "id": "41",
+    "employee_id": "7",
+    "reviewer_id": "6",
+    "reviewer_type": "peer",
+    "rating": 77.67,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-19T15:43:50.265541"
+  },
+  {
+    "id": "42",
+    "employee_id": "7",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 93.86,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-28T15:43:50.265554"
+  },
+  {
+    "id": "43",
+    "employee_id": "8",
+    "reviewer_id": "8",
+    "reviewer_type": "self",
+    "rating": 74.02,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-14T15:43:50.265569"
+  },
+  {
+    "id": "44",
+    "employee_id": "8",
+    "reviewer_id": "2",
+    "reviewer_type": "peer",
+    "rating": 67.47,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-13T15:43:50.265586"
+  },
+  {
+    "id": "45",
+    "employee_id": "8",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 84.86,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-09T15:43:50.265596"
+  },
+  {
+    "id": "1",
+    "employee_id": "1",
+    "reviewer_id": "1",
+    "reviewer_type": "self",
+    "rating": 86.61,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-11T15:49:27.160180"
+  },
+  {
+    "id": "2",
+    "employee_id": "1",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 91.62,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-15T15:49:27.160210"
+  },
+  {
+    "id": "3",
+    "employee_id": "1",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 86.61,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-26T15:49:27.160224"
+  },
+  {
+    "id": "4",
+    "employee_id": "2",
+    "reviewer_id": "2",
+    "reviewer_type": "self",
+    "rating": 82.55,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-09T15:49:27.160244"
+  },
+  {
+    "id": "5",
+    "employee_id": "2",
+    "reviewer_id": "6",
+    "reviewer_type": "peer",
+    "rating": 79.77,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-14T15:49:27.160265"
+  },
+  {
+    "id": "6",
+    "employee_id": "2",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 77.24,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-10T15:49:27.160279"
+  },
+  {
+    "id": "7",
+    "employee_id": "2",
+    "reviewer_id": "2",
+    "reviewer_type": "self",
+    "rating": 73.99,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-13T15:49:27.160292"
+  },
+  {
+    "id": "8",
+    "employee_id": "2",
+    "reviewer_id": "5",
+    "reviewer_type": "peer",
+    "rating": 83.29,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-28T15:49:27.160309"
+  },
+  {
+    "id": "9",
+    "employee_id": "2",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 90.91,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-29T15:49:27.160321"
+  },
+  {
+    "id": "10",
+    "employee_id": "3",
+    "reviewer_id": "3",
+    "reviewer_type": "self",
+    "rating": 76.05,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-22T15:49:27.160336"
+  },
+  {
+    "id": "11",
+    "employee_id": "3",
+    "reviewer_id": "6",
+    "reviewer_type": "peer",
+    "rating": 90.84,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-27T15:49:27.160354"
+  },
+  {
+    "id": "12",
+    "employee_id": "3",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 83.49,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-18T15:49:27.160366"
+  },
+  {
+    "id": "13",
+    "employee_id": "3",
+    "reviewer_id": "3",
+    "reviewer_type": "self",
+    "rating": 80.71,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-10T15:49:27.160378"
+  },
+  {
+    "id": "14",
+    "employee_id": "3",
+    "reviewer_id": "5",
+    "reviewer_type": "peer",
+    "rating": 90.44,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-29T15:49:27.160395"
+  },
+  {
+    "id": "15",
+    "employee_id": "3",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 89.62,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-07T15:49:27.160407"
+  },
+  {
+    "id": "16",
+    "employee_id": "3",
+    "reviewer_id": "3",
+    "reviewer_type": "self",
+    "rating": 80.82,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-17T15:49:27.160419"
+  },
+  {
+    "id": "17",
+    "employee_id": "3",
+    "reviewer_id": "7",
+    "reviewer_type": "peer",
+    "rating": 73.87,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-08T15:49:27.160436"
+  },
+  {
+    "id": "18",
+    "employee_id": "3",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 84.36,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-28T15:49:27.160448"
+  },
+  {
+    "id": "19",
+    "employee_id": "4",
+    "reviewer_id": "4",
+    "reviewer_type": "self",
+    "rating": 86.78,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-09T15:49:27.160469"
+  },
+  {
+    "id": "20",
+    "employee_id": "4",
+    "reviewer_id": "2",
+    "reviewer_type": "peer",
+    "rating": 83.09,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-18T15:49:27.160486"
+  },
+  {
+    "id": "21",
+    "employee_id": "4",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 83.28,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-15T15:49:27.160497"
+  },
+  {
+    "id": "22",
+    "employee_id": "4",
+    "reviewer_id": "4",
+    "reviewer_type": "self",
+    "rating": 79.44,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-12-02T15:49:27.160509"
+  },
+  {
+    "id": "23",
+    "employee_id": "4",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 77.65,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-26T15:49:27.160525"
+  },
+  {
+    "id": "24",
+    "employee_id": "4",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 78.01,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-27T15:49:27.160537"
+  },
+  {
+    "id": "25",
+    "employee_id": "4",
+    "reviewer_id": "4",
+    "reviewer_type": "self",
+    "rating": 84.12,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-13T15:49:27.160549"
+  },
+  {
+    "id": "26",
+    "employee_id": "4",
+    "reviewer_id": "7",
+    "reviewer_type": "peer",
+    "rating": 68.7,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-12-03T15:49:27.160566"
+  },
+  {
+    "id": "27",
+    "employee_id": "4",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 78.15,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-22T15:49:27.160578"
+  },
+  {
+    "id": "28",
+    "employee_id": "5",
+    "reviewer_id": "5",
+    "reviewer_type": "self",
+    "rating": 71.81,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-30T15:49:27.160593"
+  },
+  {
+    "id": "29",
+    "employee_id": "5",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 94.9,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-15T15:49:27.160615"
+  },
+  {
+    "id": "30",
+    "employee_id": "5",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 85.46,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-16T15:49:27.160627"
+  },
+  {
+    "id": "31",
+    "employee_id": "5",
+    "reviewer_id": "5",
+    "reviewer_type": "self",
+    "rating": 81.72,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-12-06T15:49:27.160639"
+  },
+  {
+    "id": "32",
+    "employee_id": "5",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 75.7,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-23T15:49:27.160656"
+  },
+  {
+    "id": "33",
+    "employee_id": "5",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 72.4,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-06T15:49:27.160667"
+  },
+  {
+    "id": "34",
+    "employee_id": "5",
+    "reviewer_id": "5",
+    "reviewer_type": "self",
+    "rating": 81.62,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-15T15:49:27.160680"
+  },
+  {
+    "id": "35",
+    "employee_id": "5",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 71.46,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-20T15:49:27.160697"
+  },
+  {
+    "id": "36",
+    "employee_id": "5",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 81.46,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-21T15:49:27.160709"
+  },
+  {
+    "id": "37",
+    "employee_id": "6",
+    "reviewer_id": "6",
+    "reviewer_type": "self",
+    "rating": 83.0,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-25T15:49:27.160724"
+  },
+  {
+    "id": "38",
+    "employee_id": "6",
+    "reviewer_id": "1",
+    "reviewer_type": "peer",
+    "rating": 68.56,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-12-04T15:49:27.160745"
+  },
+  {
+    "id": "39",
+    "employee_id": "6",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 72.61,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-09T15:49:27.160757"
+  },
+  {
+    "id": "40",
+    "employee_id": "7",
+    "reviewer_id": "7",
+    "reviewer_type": "self",
+    "rating": 80.62,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-12T15:49:27.160772"
+  },
+  {
+    "id": "41",
+    "employee_id": "7",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 81.8,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-13T15:49:27.160793"
+  },
+  {
+    "id": "42",
+    "employee_id": "7",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 88.3,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-18T15:49:27.160805"
+  },
+  {
+    "id": "43",
+    "employee_id": "7",
+    "reviewer_id": "7",
+    "reviewer_type": "self",
+    "rating": 75.67,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-13T15:49:27.160817"
+  },
+  {
+    "id": "44",
+    "employee_id": "7",
+    "reviewer_id": "1",
+    "reviewer_type": "peer",
+    "rating": 73.85,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-16T15:49:27.160834"
+  },
+  {
+    "id": "45",
+    "employee_id": "7",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 92.56,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-11-20T15:49:27.160846"
+  },
+  {
+    "id": "46",
+    "employee_id": "8",
+    "reviewer_id": "8",
+    "reviewer_type": "self",
+    "rating": 75.7,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-19T15:49:27.160861"
+  },
+  {
+    "id": "47",
+    "employee_id": "8",
+    "reviewer_id": "4",
+    "reviewer_type": "peer",
+    "rating": 78.21,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-25T15:49:27.160898"
+  },
+  {
+    "id": "48",
+    "employee_id": "8",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 80.11,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-04T15:49:27.160910"
+  },
+  {
+    "id": "49",
+    "employee_id": "8",
+    "reviewer_id": "8",
+    "reviewer_type": "self",
+    "rating": 72.88,
+    "comments": "Self-assessment: Doing well overall",
+    "created_at": "2025-11-15T15:49:27.160922"
+  },
+  {
+    "id": "50",
+    "employee_id": "8",
+    "reviewer_id": "3",
+    "reviewer_type": "peer",
+    "rating": 94.64,
+    "comments": "Good team player, helpful colleague",
+    "created_at": "2025-11-25T15:49:27.160938"
+  },
+  {
+    "id": "51",
+    "employee_id": "8",
+    "reviewer_id": "manager@company.com",
+    "reviewer_type": "manager",
+    "rating": 71.45,
+    "comments": "Solid performance, meeting expectations",
+    "created_at": "2025-12-02T15:49:27.160950"
+  }
+]

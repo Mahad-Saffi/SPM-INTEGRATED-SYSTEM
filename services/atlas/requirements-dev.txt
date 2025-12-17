@@ -1,0 +1,7 @@
+pytest
+httpx
+itsdangerous
+PyJWT
+authlib
+respx
+aiosqlite

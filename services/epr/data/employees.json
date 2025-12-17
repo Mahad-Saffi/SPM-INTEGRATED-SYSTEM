@@ -1,0 +1,141 @@
+[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "email": "john@company.com",
+    "department": "Engineering",
+    "position": "Software Developer",
+    "status": "active",
+    "hire_date": "2024-01-15",
+    "created_at": "2025-12-06T21:46:10.635977",
+    "skills": {
+      "Python": 4,
+      "JavaScript": 2,
+      "Node.js": 4,
+      "React": 2,
+      "Git": 5
+    }
+  },
+  {
+    "id": "2",
+    "name": "Jane Smith",
+    "email": "jane@company.com",
+    "department": "Engineering",
+    "position": "Senior Software Developer",
+    "status": "active",
+    "hire_date": "2023-06-10",
+    "created_at": "2025-12-06T21:52:54.060554",
+    "skills": {
+      "JavaScript": 2,
+      "Python": 4,
+      "Git": 4
+    }
+  },
+  {
+    "id": "3",
+    "name": "Mike Johnson",
+    "email": "mike@company.com",
+    "department": "Marketing",
+    "position": "Marketing Manager",
+    "status": "active",
+    "hire_date": "2023-03-15",
+    "created_at": "2025-12-06T21:52:54.060599",
+    "skills": {
+      "Project Management": 5,
+      "Communication": 3,
+      "Leadership": 4
+    }
+  },
+  {
+    "id": "4",
+    "name": "Sarah Williams",
+    "email": "sarah@company.com",
+    "department": "Engineering",
+    "position": "QA Engineer",
+    "status": "active",
+    "hire_date": "2024-02-20",
+    "created_at": "2025-12-06T21:52:54.060604",
+    "skills": {
+      "Python": 5,
+      "Git": 3,
+      "React": 5,
+      "Node.js": 5,
+      "JavaScript": 5
+    }
+  },
+  {
+    "id": "5",
+    "name": "David Brown",
+    "email": "david@company.com",
+    "department": "Sales",
+    "position": "Sales Representative",
+    "status": "active",
+    "hire_date": "2023-09-05",
+    "created_at": "2025-12-06T21:52:54.060608",
+    "skills": {
+      "Social Media": 5,
+      "SEO": 5,
+      "Analytics": 5,
+      "Digital Marketing": 5,
+      "Content Writing": 3
+    }
+  },
+  {
+    "id": "6",
+    "name": "Emily Davis",
+    "email": "emily@company.com",
+    "department": "HR",
+    "position": "HR Manager",
+    "status": "active",
+    "hire_date": "2023-01-12",
+    "created_at": "2025-12-06T21:52:54.060612",
+    "skills": {
+      "Strategic Planning": 3,
+      "Project Management": 5,
+      "Leadership": 3,
+      "Communication": 3
+    }
+  },
+  {
+    "id": "7",
+    "name": "Robert Wilson",
+    "email": "robert@company.com",
+    "department": "Engineering",
+    "position": "DevOps Engineer",
+    "status": "active",
+    "hire_date": "2024-04-18",
+    "created_at": "2025-12-06T21:52:54.060616",
+    "skills": {
+      "Node.js": 3,
+      "Git": 5,
+      "Python": 4,
+      "JavaScript": 2,
+      "React": 4,
+      "SQL": 2
+    }
+  },
+  {
+    "id": "8",
+    "name": "Lisa Anderson",
+    "email": "lisa@company.com",
+    "department": "Design",
+    "position": "UI/UX Designer",
+    "status": "active",
+    "hire_date": "2023-11-22",
+    "created_at": "2025-12-06T21:52:54.060621",
+    "skills": {
+      "Figma": 2,
+      "UI/UX Design": 4,
+      "Photoshop": 5,
+      "Illustrator": 3
+    }
+  },
+  {
+    "id": "9",
+    "name": "e2",
+    "email": "batoolayesha123456@gmail.com",
+    "position": "senier developer",
+    "created_at": "2025-12-07T20:00:39.115732",
+    "updated_at": "2025-12-07T20:00:39.115749"
+  }
+]

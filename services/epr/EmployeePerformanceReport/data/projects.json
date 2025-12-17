@@ -1,0 +1,292 @@
+[
+  {
+    "id": "1",
+    "name": "Website Redesign",
+    "description": "Complete redesign of company website with modern UI/UX",
+    "status": "active",
+    "deadline": "2026-01-20T21:49:23.831792",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-06T21:49:23.831858",
+    "updated_at": "2025-12-06T21:49:23.831866"
+  },
+  {
+    "id": "2",
+    "name": "Mobile App Development",
+    "description": "Develop mobile application for iOS and Android",
+    "status": "active",
+    "deadline": "2026-02-04T21:49:23.831872",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-16T21:49:23.831879",
+    "updated_at": "2025-12-06T21:49:23.831885"
+  },
+  {
+    "id": "3",
+    "name": "Database Migration",
+    "description": "Migrate legacy database to new cloud infrastructure",
+    "status": "in_progress",
+    "deadline": "2026-01-05T21:49:23.831890",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-21T21:49:23.831897",
+    "updated_at": "2025-12-06T21:49:23.831902"
+  },
+  {
+    "id": "4",
+    "name": "API Integration",
+    "description": "Integrate third-party APIs for payment processing",
+    "status": "active",
+    "deadline": "2025-12-31T21:49:23.831906",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-26T21:49:23.831911",
+    "updated_at": "2025-12-06T21:49:23.831917"
+  },
+  {
+    "id": "5",
+    "name": "Security Audit",
+    "description": "Comprehensive security audit and vulnerability assessment",
+    "status": "completed",
+    "deadline": "2025-12-01T21:49:23.831921",
+    "manager": "owner@company.com",
+    "created_at": "2025-10-22T21:49:23.831927",
+    "updated_at": "2025-12-01T21:49:23.831949"
+  },
+  {
+    "id": "1",
+    "name": "Website Redesign",
+    "description": "Complete redesign of company website with modern UI/UX",
+    "status": "active",
+    "deadline": "2026-01-21T15:43:01.224192",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-07T15:43:01.224255",
+    "updated_at": "2025-12-07T15:43:01.224264"
+  },
+  {
+    "id": "2",
+    "name": "Mobile App Development",
+    "description": "Develop mobile application for iOS and Android",
+    "status": "active",
+    "deadline": "2026-02-05T15:43:01.224270",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-17T15:43:01.224277",
+    "updated_at": "2025-12-07T15:43:01.224283"
+  },
+  {
+    "id": "3",
+    "name": "Database Migration",
+    "description": "Migrate legacy database to new cloud infrastructure",
+    "status": "active",
+    "deadline": "2026-01-06T15:43:01.224288",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-22T15:43:01.224294",
+    "updated_at": "2025-12-07T15:43:01.224300"
+  },
+  {
+    "id": "4",
+    "name": "API Integration",
+    "description": "Integrate third-party APIs for payment processing",
+    "status": "active",
+    "deadline": "2026-01-01T15:43:01.224305",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-27T15:43:01.224311",
+    "updated_at": "2025-12-07T15:43:01.224317"
+  },
+  {
+    "id": "5",
+    "name": "Security Audit",
+    "description": "Comprehensive security audit and vulnerability assessment",
+    "status": "completed",
+    "deadline": "2025-12-02T15:43:01.224321",
+    "manager": "owner@company.com",
+    "created_at": "2025-10-23T15:43:01.224327",
+    "updated_at": "2025-12-02T15:43:01.224333"
+  },
+  {
+    "id": "6",
+    "name": "Cloud Infrastructure Setup",
+    "description": "Set up cloud infrastructure on AWS",
+    "status": "active",
+    "deadline": "2026-01-16T15:43:01.224339",
+    "manager": "emily@company.com",
+    "created_at": "2025-11-25T15:43:01.224345",
+    "updated_at": "2025-12-07T15:43:01.224351"
+  },
+  {
+    "id": "7",
+    "name": "Customer Portal",
+    "description": "Build customer self-service portal",
+    "status": "active",
+    "deadline": "2026-01-26T15:43:01.224356",
+    "manager": "mike@company.com",
+    "created_at": "2025-11-29T15:43:01.224362",
+    "updated_at": "2025-12-07T15:43:01.224367"
+  },
+  {
+    "id": "8",
+    "name": "Data Analytics Dashboard",
+    "description": "Create analytics dashboard for business intelligence",
+    "status": "active",
+    "deadline": "2026-01-11T15:43:01.224372",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-19T15:43:01.224378",
+    "updated_at": "2025-12-07T15:43:01.224384"
+  },
+  {
+    "id": "1",
+    "name": "Website Redesign",
+    "description": "Complete redesign of company website with modern UI/UX",
+    "status": "active",
+    "deadline": "2026-01-21T15:43:50.233579",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-07T15:43:50.233645",
+    "updated_at": "2025-12-07T15:43:50.233654"
+  },
+  {
+    "id": "2",
+    "name": "Mobile App Development",
+    "description": "Develop mobile application for iOS and Android",
+    "status": "active",
+    "deadline": "2026-02-05T15:43:50.233660",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-17T15:43:50.233666",
+    "updated_at": "2025-12-07T15:43:50.233671"
+  },
+  {
+    "id": "3",
+    "name": "Database Migration",
+    "description": "Migrate legacy database to new cloud infrastructure",
+    "status": "active",
+    "deadline": "2026-01-06T15:43:50.233676",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-22T15:43:50.233682",
+    "updated_at": "2025-12-07T15:43:50.233687"
+  },
+  {
+    "id": "4",
+    "name": "API Integration",
+    "description": "Integrate third-party APIs for payment processing",
+    "status": "active",
+    "deadline": "2026-01-01T15:43:50.233694",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-27T15:43:50.233701",
+    "updated_at": "2025-12-07T15:43:50.233705"
+  },
+  {
+    "id": "5",
+    "name": "Security Audit",
+    "description": "Comprehensive security audit and vulnerability assessment",
+    "status": "completed",
+    "deadline": "2025-12-02T15:43:50.233710",
+    "manager": "owner@company.com",
+    "created_at": "2025-10-23T15:43:50.233716",
+    "updated_at": "2025-12-02T15:43:50.233724"
+  },
+  {
+    "id": "6",
+    "name": "Cloud Infrastructure Setup",
+    "description": "Set up cloud infrastructure on AWS",
+    "status": "active",
+    "deadline": "2026-01-16T15:43:50.233736",
+    "manager": "emily@company.com",
+    "created_at": "2025-11-25T15:43:50.233745",
+    "updated_at": "2025-12-07T15:43:50.233751"
+  },
+  {
+    "id": "7",
+    "name": "Customer Portal",
+    "description": "Build customer self-service portal",
+    "status": "active",
+    "deadline": "2026-01-26T15:43:50.233757",
+    "manager": "mike@company.com",
+    "created_at": "2025-11-29T15:43:50.233766",
+    "updated_at": "2025-12-07T15:43:50.233773"
+  },
+  {
+    "id": "8",
+    "name": "Data Analytics Dashboard",
+    "description": "Create analytics dashboard for business intelligence",
+    "status": "active",
+    "deadline": "2026-01-11T15:43:50.233779",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-19T15:43:50.233787",
+    "updated_at": "2025-12-07T15:43:50.233796"
+  },
+  {
+    "id": "1",
+    "name": "Website Redesign",
+    "description": "Complete redesign of company website with modern UI/UX",
+    "status": "active",
+    "deadline": "2026-01-21T15:49:27.140581",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-07T15:49:27.140643",
+    "updated_at": "2025-12-07T15:49:27.140652"
+  },
+  {
+    "id": "2",
+    "name": "Mobile App Development",
+    "description": "Develop mobile application for iOS and Android",
+    "status": "active",
+    "deadline": "2026-02-05T15:49:27.140659",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-17T15:49:27.140664",
+    "updated_at": "2025-12-07T15:49:27.140668"
+  },
+  {
+    "id": "3",
+    "name": "Database Migration",
+    "description": "Migrate legacy database to new cloud infrastructure",
+    "status": "active",
+    "deadline": "2026-01-06T15:49:27.140671",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-22T15:49:27.140675",
+    "updated_at": "2025-12-07T15:49:27.140679"
+  },
+  {
+    "id": "4",
+    "name": "API Integration",
+    "description": "Integrate third-party APIs for payment processing",
+    "status": "active",
+    "deadline": "2026-01-01T15:49:27.140683",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-27T15:49:27.140689",
+    "updated_at": "2025-12-07T15:49:27.140696"
+  },
+  {
+    "id": "5",
+    "name": "Security Audit",
+    "description": "Comprehensive security audit and vulnerability assessment",
+    "status": "completed",
+    "deadline": "2025-12-02T15:49:27.140700",
+    "manager": "owner@company.com",
+    "created_at": "2025-10-23T15:49:27.140705",
+    "updated_at": "2025-12-02T15:49:27.140709"
+  },
+  {
+    "id": "6",
+    "name": "Cloud Infrastructure Setup",
+    "description": "Set up cloud infrastructure on AWS",
+    "status": "active",
+    "deadline": "2026-01-16T15:49:27.140713",
+    "manager": "emily@company.com",
+    "created_at": "2025-11-25T15:49:27.140718",
+    "updated_at": "2025-12-07T15:49:27.140722"
+  },
+  {
+    "id": "7",
+    "name": "Customer Portal",
+    "description": "Build customer self-service portal",
+    "status": "active",
+    "deadline": "2026-01-26T15:49:27.140726",
+    "manager": "mike@company.com",
+    "created_at": "2025-11-29T15:49:27.140730",
+    "updated_at": "2025-12-07T15:49:27.140735"
+  },
+  {
+    "id": "8",
+    "name": "Data Analytics Dashboard",
+    "description": "Create analytics dashboard for business intelligence",
+    "status": "active",
+    "deadline": "2026-01-11T15:49:27.140738",
+    "manager": "owner@company.com",
+    "created_at": "2025-11-19T15:49:27.140743",
+    "updated_at": "2025-12-07T15:49:27.140748"
+  }
+]

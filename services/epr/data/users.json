@@ -1,0 +1,65 @@
+{
+  "owner@company.com": {
+    "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "role": "owner",
+    "name": "Project Owner",
+    "created_at": "2025-12-05",
+    "active": true
+  },
+  "john@company.com": {
+    "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "employee",
+    "name": "John Doe",
+    "created_at": "2025-12-05",
+    "active": true
+  },
+  "jane@company.com": {
+    "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "employee",
+    "name": "Jane Smith",
+    "created_at": "2025-12-06",
+    "active": true
+  },
+  "mike@company.com": {
+    "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "manager",
+    "name": "Mike Johnson",
+    "created_at": "2025-12-06",
+    "active": true
+  },
+  "sarah@company.com": {
+    "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "employee",
+    "name": "Sarah Williams",
+    "created_at": "2025-12-06",
+    "active": true
+  },
+  "david@company.com": {
+    "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "employee",
+    "name": "David Brown",
+    "created_at": "2025-12-06",
+    "active": true
+  },
+  "emily@company.com": {
+    "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "manager",
+    "name": "Emily Davis",
+    "created_at": "2025-12-06",
+    "active": true
+  },
+  "robert@company.com": {
+    "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "employee",
+    "name": "Robert Wilson",
+    "created_at": "2025-12-06",
+    "active": true
+  },
+  "lisa@company.com": {
+    "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "employee",
+    "name": "Lisa Anderson",
+    "created_at": "2025-12-06",
+    "active": true
+  }
+}
