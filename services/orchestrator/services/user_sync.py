@@ -39,10 +39,10 @@ class UserSyncService:
                 response = await client.post(
                     f"{settings.atlas_service_url}/api/v1/internal/users/sync",
                     json={
-                        "orchestrator_user_id": user_data["id"],
+                        "id": user_data["id"],
                         "email": user_data["email"],
                         "name": user_data["name"],
-                        "organization_id": user_data.get("organization_id")
+                        "role": user_data.get("role", "developer")
                     },
                     headers={"X-Service-Token": self.service_token}
                 )
@@ -74,7 +74,7 @@ class UserSyncService:
         try:
             async with httpx.AsyncClient(timeout=self.timeout) as client:
                 response = await client.post(
-                    f"{settings.epr_service_url}/api/v1/employees",
+                    f"{settings.epr_service_url}/api/v1/employees/sync",
                     json={
                         "employee_id": user_data["id"],
                         "email": user_data["email"],
@@ -93,7 +93,7 @@ class UserSyncService:
         try:
             async with httpx.AsyncClient(timeout=self.timeout) as client:
                 response = await client.post(
-                    f"{settings.labs_service_url}/users/sync",
+                    f"{settings.labs_service_url}/api/v1/users/sync",
                     json={
                         "orchestrator_user_id": user_data["id"],
                         "email": user_data["email"],

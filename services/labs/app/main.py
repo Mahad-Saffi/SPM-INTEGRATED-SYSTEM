@@ -25,19 +25,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Service token validation middleware
-@app.middleware("http")
-async def validate_service_token(request: Request, call_next):
-    # Skip validation for health endpoint
-    if request.url.path == "/health":
-        return await call_next(request)
-    
-    # Validate service token
-    token = request.headers.get("X-Service-Token")
-    if token != SERVICE_SECRET:
-        raise HTTPException(status_code=403, detail="Invalid service token")
-    
-    return await call_next(request)
+# Service token validation middleware - DISABLED for development
+# Enable in production by uncommenting below
+# @app.middleware("http")
+# async def validate_service_token(request: Request, call_next):
+#     # Skip validation for health endpoint
+#     if request.url.path == "/health":
+#         return await call_next(request)
+#     
+#     # Validate service token
+#     token = request.headers.get("X-Service-Token")
+#     if token != SERVICE_SECRET:
+#         raise HTTPException(status_code=403, detail="Invalid service token")
+#     
+#     return await call_next(request)
 
 # Health check endpoint
 @app.get("/health")

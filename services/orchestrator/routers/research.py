@@ -2,12 +2,57 @@
 Research router - proxy requests to Labs service
 """
 from fastapi import APIRouter, Depends
-from typing import Dict, Any
+from typing import Dict, Any, Optional
+from pydantic import BaseModel, EmailStr
 
 from auth.jwt_handler import get_current_user
 from services.labs_client import labs_client
 
 router = APIRouter(prefix="/api/v1/research", tags=["Research"])
+
+
+class LabCreate(BaseModel):
+    name: str
+    description: str
+    location: Optional[str] = None
+    head_researcher: Optional[str] = None
+    budget: Optional[float] = None
+    research_focus: Optional[str] = None
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "AI Research Lab",
+                "description": "Artificial Intelligence research",
+                "location": "Building A, Floor 3",
+                "head_researcher": "Dr. Smith",
+                "budget": 500000,
+                "research_focus": "Machine Learning"
+            }
+        }
+
+
+class ResearcherCreate(BaseModel):
+    name: str
+    email: EmailStr
+    specialization: str
+    lab_id: int
+    years_experience: int
+    education: Optional[str] = None
+    publications: Optional[int] = None
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "Dr. Jane Smith",
+                "email": "jane@example.com",
+                "specialization": "Machine Learning",
+                "lab_id": 1,
+                "years_experience": 10,
+                "education": "PhD in Computer Science",
+                "publications": 25
+            }
+        }
 
 
 @router.get("/labs")
@@ -23,9 +68,9 @@ async def get_lab(lab_id: int, current_user = Depends(get_current_user)):
 
 
 @router.post("/labs")
-async def create_lab(lab_data: Dict[str, Any], current_user = Depends(get_current_user)):
+async def create_lab(lab_data: LabCreate, current_user = Depends(get_current_user)):
     """Create a new lab"""
-    return await labs_client.create_lab(lab_data)
+    return await labs_client.create_lab(lab_data.dict())
 
 
 @router.get("/researchers")
@@ -41,9 +86,9 @@ async def get_lab_researchers(lab_id: int, current_user = Depends(get_current_us
 
 
 @router.post("/researchers")
-async def create_researcher(researcher_data: Dict[str, Any], current_user = Depends(get_current_user)):
+async def create_researcher(researcher_data: ResearcherCreate, current_user = Depends(get_current_user)):
     """Create a new researcher"""
-    return await labs_client.create_researcher(researcher_data)
+    return await labs_client.create_researcher(researcher_data.dict())
 
 
 @router.get("/collaborations")

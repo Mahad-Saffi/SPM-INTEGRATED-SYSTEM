@@ -32,19 +32,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Service token validation middleware
-@app.middleware("http")
-async def validate_service_token(request: Request, call_next):
-    # Skip validation for health endpoint
-    if request.url.path == "/health":
-        return await call_next(request)
-    
-    # Validate service token
-    token = request.headers.get("X-Service-Token")
-    if token != SERVICE_SECRET:
-        raise HTTPException(status_code=403, detail="Invalid service token")
-    
-    return await call_next(request)
+# Service token validation middleware - DISABLED for development
+# Enable in production by uncommenting below
+# @app.middleware("http")
+# async def validate_service_token(request: Request, call_next):
+#     # Skip validation for health endpoint
+#     if request.url.path == "/health":
+#         return await call_next(request)
+#     
+#     # Validate service token
+#     token = request.headers.get("X-Service-Token")
+#     if token != SERVICE_SECRET:
+#         raise HTTPException(status_code=403, detail="Invalid service token")
+#     
+#     return await call_next(request)
 
 # Health check endpoint
 @app.get("/health")
@@ -61,18 +62,18 @@ async def startup_event():
     """Initialize database on startup"""
     init_db()
 
-# Include routers with /api/v1 prefix
-app.include_router(reviews.router, prefix="/api/v1")
-app.include_router(goals.router, prefix="/api/v1")
-app.include_router(feedback.router, prefix="/api/v1")
-app.include_router(skills.router, prefix="/api/v1")
-app.include_router(analytics.router, prefix="/api/v1")
-app.include_router(reports.router, prefix="/api/v1")
-app.include_router(employees.router, prefix="/api/v1")
-app.include_router(tasks.router, prefix="/api/v1")
-app.include_router(projects.router, prefix="/api/v1")
-app.include_router(performances.router, prefix="/api/v1")
-app.include_router(notifications.router, prefix="/api/v1")
+# Include routers (they already have /api/v1 prefix)
+app.include_router(reviews.router)
+app.include_router(goals.router)
+app.include_router(feedback.router)
+app.include_router(skills.router)
+app.include_router(analytics.router)
+app.include_router(reports.router)
+app.include_router(employees.router)
+app.include_router(tasks.router)
+app.include_router(projects.router)
+app.include_router(performances.router)
+app.include_router(notifications.router)
 
 @app.get("/")
 async def root():

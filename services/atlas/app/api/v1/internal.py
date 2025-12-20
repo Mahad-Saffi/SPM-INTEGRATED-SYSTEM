@@ -80,3 +80,116 @@ async def sync_user(
     except Exception as e:
         logger.error(f"Error syncing user to Atlas: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to sync user: {str(e)}")
+
+
+@router.get("/user/{user_id}/projects")
+async def get_user_projects(
+    user_id: str,
+    _: bool = Depends(verify_service_token)
+):
+    """Get all projects for a user (internal endpoint)"""
+    try:
+        from app.services.project_service import project_service
+        from app.models.user import User
+        
+        async with SessionLocal() as session:
+            # Find user by orchestrator_user_id
+            result = await session.execute(
+                select(User).where(User.orchestrator_user_id == uuid.UUID(user_id))
+            )
+            user = result.scalars().first()
+            
+            if not user:
+                return []
+            
+            projects = await project_service.get_user_projects(user.id)
+            return projects
+            
+    except Exception as e:
+        logger.error(f"Error getting user projects: {str(e)}")
+        return []
+
+
+@router.get("/user/{user_id}/tasks")
+async def get_user_tasks(
+    user_id: str,
+    _: bool = Depends(verify_service_token)
+):
+    """Get all tasks for a user (internal endpoint)"""
+    try:
+        from app.services.task_service import task_service
+        from app.models.user import User
+        
+        async with SessionLocal() as session:
+            # Find user by orchestrator_user_id
+            result = await session.execute(
+                select(User).where(User.orchestrator_user_id == uuid.UUID(user_id))
+            )
+            user = result.scalars().first()
+            
+            if not user:
+                return []
+            
+            tasks = await task_service.get_user_tasks(user.id)
+            return tasks
+            
+    except Exception as e:
+        logger.error(f"Error getting user tasks: {str(e)}")
+        return []
+
+
+@router.post("/tasks")
+async def create_task_internal(
+    task_data: dict,
+    _: bool = Depends(verify_service_token)
+):
+    """Create a task (internal endpoint)"""
+    try:
+        from app.services.task_service import task_service
+        
+        task = await task_service.create_task(task_data)
+        return task
+            
+    except Exception as e:
+        logger.error(f"Error creating task: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to create task: {str(e)}")
+
+
+@router.get("/user/{user_id}/organizations")
+async def get_user_organizations(
+    user_id: str,
+    _: bool = Depends(verify_service_token)
+):
+    """Get organizations for a user (internal endpoint)"""
+    try:
+        from app.models.user import User
+        from app.models.organization import Organization
+        
+        async with SessionLocal() as session:
+            # Find user by orchestrator_user_id
+            result = await session.execute(
+                select(User).where(User.orchestrator_user_id == uuid.UUID(user_id))
+            )
+            user = result.scalars().first()
+            
+            if not user:
+                return []
+            
+            # Get user's organization
+            if user.organization_id:
+                org_result = await session.execute(
+                    select(Organization).where(Organization.id == user.organization_id)
+                )
+                org = org_result.scalars().first()
+                if org:
+                    return [{
+                        "id": org.id,
+                        "name": org.name,
+                        "description": org.description
+                    }]
+            
+            return []
+            
+    except Exception as e:
+        logger.error(f"Error getting user organizations: {str(e)}")
+        return []

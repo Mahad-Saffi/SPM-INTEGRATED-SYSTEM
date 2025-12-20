@@ -17,6 +17,9 @@ def get_user_by_email(db: Session, email: str):
 def get_labs(db: Session):
     return db.query(models.Lab).all()
 
+def get_lab(db: Session, lab_id: int):
+    return db.query(models.Lab).filter(models.Lab.id == lab_id).first()
+
 def create_lab(db: Session, lab: schemas.LabBase):
     db_lab = models.Lab(**lab.dict())
     db.add(db_lab)
