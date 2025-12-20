@@ -1,9 +1,8 @@
 """
 PostgreSQL Database Setup for Performance API
 """
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+from sqlalchemy.orm import sessionmaker, declarative_base
 import os
 from dotenv import load_dotenv
 
@@ -11,32 +10,38 @@ load_dotenv()
 
 # PostgreSQL connection with performance schema
 DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "postgresql://admin:secure_password@localhost:5432/project_management"
+    "EPR_DATABASE_URL",
+    os.getenv(
+        "DATABASE_URL",
+        "postgresql+asyncpg://admin:admin123@localhost:5432/epr"
+    )
 )
 
-# Create engine
-engine = create_engine(
+# Create async engine
+engine = create_async_engine(
     DATABASE_URL,
-    connect_args={"options": "-c search_path=performance,public"}
+    connect_args={"server_settings": {"search_path": "performance,public"}}
 )
 
 # Session factory
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(
+    autocommit=False, 
+    autoflush=False, 
+    bind=engine, 
+    class_=AsyncSession
+)
 
 # Base class for models
 Base = declarative_base()
 
-def get_db():
+async def get_db():
     """Dependency to get database session"""
-    db = SessionLocal()
-    try:
+    async with SessionLocal() as db:
         yield db
-    finally:
-        db.close()
 
-def init_db():
+async def init_db():
     """Initialize database tables"""
-    Base.metadata.create_all(bind=engine)
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 

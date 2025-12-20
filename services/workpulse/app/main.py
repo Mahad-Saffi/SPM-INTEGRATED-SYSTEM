@@ -9,22 +9,6 @@ from datetime import datetime
 
 load_dotenv()
 
-# Create DB tables
-Base.metadata.create_all(bind=engine)
-
-# Ensure users table exists (SQLAlchemy ORM sometimes doesn't create it)
-with engine.connect() as conn:
-    conn.execute(text("""
-        CREATE TABLE IF NOT EXISTS workpulse.users (
-            id VARCHAR(50) PRIMARY KEY,
-            orchestrator_user_id UUID UNIQUE NOT NULL,
-            email VARCHAR UNIQUE,
-            name VARCHAR,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
-    """))
-    conn.commit()
-
 app = FastAPI(title="WorkPulse Activity Monitoring Service", version="1.0.0")
 
 # Service authentication
@@ -38,6 +22,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Initialize database on startup
+@app.on_event("startup")
+async def startup_event():
+    """Initialize database tables on startup"""
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 # Service token validation middleware - DISABLED for development
 # Enable in production by uncommenting below

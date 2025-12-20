@@ -1,0 +1,169 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15
+    container_name: project_management_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-databases.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - project_network
+
+  # Orchestrator Service
+  orchestrator:
+    build:
+      context: .
+      dockerfile: services/orchestrator/Dockerfile
+    container_name: orchestrator_service
+    environment:
+      - DB_TYPE=postgresql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=project_management
+      - DB_USER=admin
+      - DB_PASSWORD=admin123
+      - DATABASE_URL=postgresql+asyncpg://admin:admin123@postgres:5432/project_management
+      - ORCHESTRATOR_HOST=0.0.0.0
+      - ORCHESTRATOR_PORT=9000
+      - ORCHESTRATOR_DEBUG=true
+      - ENVIRONMENT=development
+    ports:
+      - "9000:9000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - project_network
+    volumes:
+      - ./services/orchestrator:/app
+
+  # Atlas Service
+  atlas:
+    build:
+      context: .
+      dockerfile: services/atlas/Dockerfile
+    container_name: atlas_service
+    environment:
+      - DB_TYPE=postgresql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=atlas
+      - DB_USER=admin
+      - DB_PASSWORD=admin123
+      - ATLAS_DATABASE_URL=postgresql+asyncpg://admin:admin123@postgres:5432/atlas
+      - ATLAS_HOST=0.0.0.0
+      - ATLAS_PORT=8000
+      - ATLAS_DEBUG=true
+      - ENVIRONMENT=development
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - project_network
+    volumes:
+      - ./services/atlas:/app
+
+  # WorkPulse Service
+  workpulse:
+    build:
+      context: .
+      dockerfile: services/workpulse/Dockerfile
+    container_name: workpulse_service
+    environment:
+      - DB_TYPE=postgresql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=workpulse
+      - DB_USER=admin
+      - DB_PASSWORD=admin123
+      - WORKPULSE_DATABASE_URL=postgresql+asyncpg://admin:admin123@postgres:5432/workpulse
+      - WORKPULSE_HOST=0.0.0.0
+      - WORKPULSE_PORT=8001
+      - WORKPULSE_DEBUG=true
+      - ENVIRONMENT=development
+    ports:
+      - "8001:8001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - project_network
+    volumes:
+      - ./services/workpulse:/app
+
+  # EPR Service
+  epr:
+    build:
+      context: .
+      dockerfile: services/epr/Dockerfile
+    container_name: epr_service
+    environment:
+      - DB_TYPE=postgresql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=epr
+      - DB_USER=admin
+      - DB_PASSWORD=admin123
+      - EPR_DATABASE_URL=postgresql+asyncpg://admin:admin123@postgres:5432/epr
+      - EPR_HOST=0.0.0.0
+      - EPR_PORT=8003
+      - EPR_DEBUG=true
+      - ENVIRONMENT=development
+    ports:
+      - "8003:8003"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - project_network
+    volumes:
+      - ./services/epr:/app
+
+  # Labs Service
+  labs:
+    build:
+      context: .
+      dockerfile: services/labs/Dockerfile
+    container_name: labs_service
+    environment:
+      - DB_TYPE=postgresql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=labs
+      - DB_USER=admin
+      - DB_PASSWORD=admin123
+      - LABS_DATABASE_URL=postgresql+asyncpg://admin:admin123@postgres:5432/labs
+      - LABS_HOST=0.0.0.0
+      - LABS_PORT=8004
+      - LABS_DEBUG=true
+      - ENVIRONMENT=development
+    ports:
+      - "8004:8004"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - project_network
+    volumes:
+      - ./services/labs:/app
+
+volumes:
+  postgres_data:
+
+networks:
+  project_network:
+    driver: bridge

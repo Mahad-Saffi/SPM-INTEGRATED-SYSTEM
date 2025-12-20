@@ -21,6 +21,10 @@ class EPRClient(BaseServiceClient):
         result = await self.get(f"/api/v1/goals/user/{user_id}", token)
         return result if isinstance(result, list) else []
     
+    async def get_goals(self, user_id: str, token: Optional[str] = None) -> List[Dict[str, Any]]:
+        """Get user's goals (alias for get_user_goals)"""
+        return await self.get_user_goals(user_id, token)
+    
     async def create_goal(self, goal_data: Dict[str, Any], token: Optional[str] = None) -> Dict[str, Any]:
         """Create a new goal"""
         return await self.post("/api/v1/goals", goal_data, token)

@@ -31,11 +31,14 @@ class LabBase(BaseModel):
     description: Optional[str] = None
 
 class LabCreate(LabBase):
-    orchestrator_org_id: Optional[UUID] = None
+    orchestrator_org_id: UUID  # REQUIRED - Organization
+    orchestrator_user_id: Optional[UUID] = None  # Who created this lab
 
 class LabResponse(LabBase):
     id: int
-    orchestrator_org_id: Optional[UUID] = None
+    orchestrator_org_id: UUID
+    orchestrator_user_id: Optional[UUID] = None
+    head_id: Optional[int] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
 
@@ -45,6 +48,7 @@ class LabResponse(LabBase):
 # Researchers
 class ResearcherBase(BaseModel):
     name: str
+    email: str
     field: Optional[str] = None
     lab_id: int
 
@@ -54,6 +58,9 @@ class ResearcherCreate(ResearcherBase):
 class ResearcherResponse(ResearcherBase):
     id: int
     orchestrator_user_id: Optional[UUID] = None
+    status: str = "pending"
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
 
     class Config:
         from_attributes = True

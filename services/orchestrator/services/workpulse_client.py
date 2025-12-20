@@ -20,6 +20,26 @@ class WorkPulseClient(BaseServiceClient):
         """Get today's activity"""
         return await self.get(f"/api/v1/activity/user/{user_id}/today", token)
     
+    async def get_activities(self, user_id: str, start_date: Optional[str] = None, end_date: Optional[str] = None, token: Optional[str] = None) -> List[Dict[str, Any]]:
+        """Get user activities"""
+        params = {}
+        if start_date:
+            params["start_date"] = start_date
+        if end_date:
+            params["end_date"] = end_date
+        result = await self.get(f"/api/v1/activity/user/{user_id}", token, params)
+        return result if isinstance(result, list) else []
+    
+    async def get_team_activities(self, org_id: str, start_date: Optional[str] = None, end_date: Optional[str] = None, token: Optional[str] = None) -> List[Dict[str, Any]]:
+        """Get team activities"""
+        params = {}
+        if start_date:
+            params["start_date"] = start_date
+        if end_date:
+            params["end_date"] = end_date
+        result = await self.get(f"/api/v1/activity/team/{org_id}", token, params)
+        return result if isinstance(result, list) else []
+    
     async def log_activity(self, activity_data: Dict[str, Any], token: Optional[str] = None) -> Dict[str, Any]:
         """Log user activity"""
         return await self.post("/api/v1/activity/", activity_data, token)

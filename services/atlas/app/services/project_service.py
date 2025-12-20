@@ -9,7 +9,7 @@ import uuid
 
 class ProjectService:
     async def get_user_projects(self, user_id: int) -> list:
-        """Get all projects for a user's organization"""
+        """Get all projects owned by or assigned to the user"""
         from app.services.organization_service import organization_service
         
         async with SessionLocal() as session:
@@ -18,9 +18,12 @@ class ProjectService:
             if not org:
                 return []
             
-            # Get all projects in the organization (org.id is already a UUID object)
+            # Get only projects owned by this user in the organization
             result = await session.execute(
-                select(Project).where(Project.organization_id == org.id)
+                select(Project).where(
+                    (Project.organization_id == org.id) and
+                    (Project.owner_id == user_id)
+                )
             )
             projects = result.scalars().all()
             return [
@@ -32,6 +35,32 @@ class ProjectService:
                 }
                 for project in projects
             ]
+
+    async def create_project(self, name: str, description: str, owner_id: str, organization_id: str, lab_id: int = None) -> dict:
+        """Create a new project"""
+        async with SessionLocal() as session:
+            async with session.begin():
+                project = Project(
+                    name=name,
+                    description=description,
+                    owner_id=owner_id,
+                    organization_id=organization_id,
+                    lab_id=lab_id
+                )
+                session.add(project)
+                await session.flush()
+                await session.commit()
+                
+                return {
+                    "id": str(project.id),
+                    "name": project.name,
+                    "description": project.description,
+                    "organization_id": str(project.organization_id),
+                    "owner_id": str(project.owner_id),
+                    "lab_id": project.lab_id,
+                    "created_at": project.created_at.isoformat() if project.created_at else None,
+                }
+
     async def create_project_from_plan(self, plan: dict, owner_id: str, organization_id = None) -> Project:
         """
         Create a project with epics, stories, and tasks from AI-generated plan.

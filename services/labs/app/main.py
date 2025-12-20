@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import text
 from .database import Base, engine
 from .routers import labs, researchers, users, collaboration
 import os
@@ -8,13 +9,17 @@ from datetime import datetime
 
 load_dotenv()
 
-# Create DB tables
-Base.metadata.create_all(bind=engine)
-
 app = FastAPI(title="History of Lab Records Service", version="1.0.0")
 
 # Service authentication
 SERVICE_SECRET = os.getenv("SERVICE_SECRET", "shared-secret-token")
+
+# Initialize database on startup
+@app.on_event("startup")
+async def startup_event():
+    """Initialize database tables on startup"""
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 # CORS
 app.add_middleware(

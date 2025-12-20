@@ -1,7 +1,9 @@
 fastapi
 uvicorn
 sqlalchemy
+asyncpg
 pydantic
+email-validator
 python-jose
 passlib[bcrypt]
 databases

@@ -37,12 +37,17 @@ class LabsClient:
         except Exception as e:
             return "unhealthy"
     
-    async def get_labs(self, token: Optional[str] = None) -> List[Dict[str, Any]]:
-        """Get all labs"""
+    async def get_labs(self, token: Optional[str] = None, user_id: Optional[str] = None, org_id: Optional[str] = None) -> List[Dict[str, Any]]:
+        """Get labs - optionally filtered by user or organization"""
         url = f"{self.base_url}/api/v1/labs/"
         try:
             async with httpx.AsyncClient(timeout=30.0) as client:
-                response = await client.get(url, headers=self._get_headers(token))
+                params = {}
+                if user_id:
+                    params["user_id"] = user_id
+                if org_id:
+                    params["org_id"] = org_id
+                response = await client.get(url, headers=self._get_headers(token), params=params)
                 response.raise_for_status()
                 result = response.json()
                 return result if isinstance(result, list) else []

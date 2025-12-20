@@ -16,7 +16,7 @@ from contextlib import asynccontextmanager
 from database import init_db, get_db
 from config import settings
 from auth.jwt_handler import get_current_user
-from routers import auth, health, projects, monitoring, performance, research
+from routers import auth, health, projects, monitoring, performance, research, activities, dashboard
 from aggregators.dashboard import dashboard_aggregator
 
 # List of service URLs to check
@@ -232,6 +232,19 @@ app.include_router(projects.router)
 app.include_router(monitoring.router)
 app.include_router(performance.router)
 app.include_router(research.router)
+app.include_router(activities.router)
+app.include_router(dashboard.router)
+
+# Simple health check endpoint for Docker health checks
+@app.get("/health")
+async def simple_health_check():
+    """Simple health check endpoint for Docker"""
+    from datetime import datetime
+    return {
+        "status": "healthy",
+        "service": "orchestrator",
+        "timestamp": datetime.utcnow().isoformat()
+    }
 
 # Root endpoint
 @app.get("/")

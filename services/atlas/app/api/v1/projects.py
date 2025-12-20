@@ -9,6 +9,12 @@ from datetime import datetime
 
 router = APIRouter()
 
+class ProjectCreateRequest(BaseModel):
+    name: str
+    description: Optional[str] = None
+    organization_id: Optional[str] = None
+    lab_id: Optional[int] = None
+
 class TaskUpdateRequest(BaseModel):
     estimate_hours: Optional[int] = None
     progress_percentage: Optional[int] = None
@@ -25,6 +31,21 @@ async def get_user_projects(current_user: dict = Depends(get_current_user)):
     """Get all projects for the current user"""
     projects = await project_service.get_user_projects(current_user['id'])
     return projects
+
+@router.post("")
+async def create_project(
+    project_data: ProjectCreateRequest,
+    current_user: dict = Depends(get_current_user)
+):
+    """Create a new project"""
+    project = await project_service.create_project(
+        name=project_data.name,
+        description=project_data.description,
+        owner_id=current_user['id'],
+        organization_id=project_data.organization_id,
+        lab_id=project_data.lab_id
+    )
+    return project
 
 @router.get("/{project_id}/tasks")
 async def get_project_tasks(project_id: str, current_user: dict = Depends(get_current_user)):

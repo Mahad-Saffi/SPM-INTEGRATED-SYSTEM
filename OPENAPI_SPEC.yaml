@@ -1,0 +1,1078 @@
+openapi: 3.1.0
+info:
+  title: Project Management Orchestrator - Revised
+  version: 2.0.0
+  description: |
+    Unified API with proper organization isolation and role-based access control.
+    
+    **Authentication**: All endpoints require Bearer token except /register and /login
+    **Authorization**: Enforced at endpoint level based on user role
+    **Data Isolation**: Users can only access data from their organization
+
+servers:
+  - url: http://localhost:9000
+    description: Development server
+  - url: https://api.example.com
+    description: Production server
+
+# ============================================
+# AUTHENTICATION & ORGANIZATION MANAGEMENT
+# ============================================
+
+paths:
+  /api/v1/auth/register:
+    post:
+      tags: [Authentication]
+      summary: Register new user
+      description: Creates user account (no organization yet)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, name, password]
+              properties:
+                email:
+                  type: string
+                  format: email
+                name:
+                  type: string
+                password:
+                  type: string
+                  minLength: 8
+      responses:
+        '201':
+          description: User created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        format: uuid
+                      email:
+                        type: string
+                      name:
+                        type: string
+                      role:
+                        type: string
+                        enum: [member]
+                      organization_id:
+                        type: string
+                        nullable: true
+        '400':
+          description: Email already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/v1/auth/login:
+    post:
+      tags: [Authentication]
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  user:
+                    type: object
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/v1/auth/me:
+    get:
+      tags: [Authentication]
+      summary: Get current user info
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: User info with organization details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                  email:
+                    type: string
+                  name:
+                    type: string
+                  role:
+                    type: string
+                    enum: [admin, manager, member]
+                  organization_id:
+                    type: string
+                    format: uuid
+                    nullable: true
+        '401':
+          description: Unauthorized
+
+# ============================================
+# ORGANIZATION ENDPOINTS
+# ============================================
+
+  /api/v1/organizations:
+    post:
+      tags: [Organizations]
+      summary: Create organization
+      description: |
+        Creates new organization and makes current user the admin.
+        ⚠️ User must not already be in an organization.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+      responses:
+        '201':
+          description: Organization created, user is now admin
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                  name:
+                    type: string
+                  owner_id:
+                    type: string
+                    format: uuid
+        '400':
+          description: User already in organization
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    get:
+      tags: [Organizations]
+      summary: Get user's organization
+      description: Returns the organization the user belongs to
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Organization details
+          content:
+            application/json:
+              schema:
+                type: object
+        '404':
+          description: User not in any organization
+
+  /api/v1/organizations/{org_id}:
+    get:
+      tags: [Organizations]
+      summary: Get organization details
+      description: Only accessible if user is member of this org
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: org_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Organization details
+        '403':
+          description: Not a member of this organization
+
+  /api/v1/organizations/{org_id}/members:
+    get:
+      tags: [Organizations]
+      summary: List organization members
+      description: Admin and manager can see all members
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: org_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: List of members with roles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      format: uuid
+                    email:
+                      type: string
+                    name:
+                      type: string
+                    role:
+                      type: string
+                      enum: [admin, manager, member]
+
+# ============================================
+# INVITATION ENDPOINTS
+# ============================================
+
+  /api/v1/invitations:
+    post:
+      tags: [Invitations]
+      summary: Send invitation to join organization
+      description: |
+        ⚠️ Only admins can send invitations.
+        Invites user to join the organization with specified role.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, role]
+              properties:
+                email:
+                  type: string
+                  format: email
+                role:
+                  type: string
+                  enum: [admin, manager, member]
+                  default: member
+      responses:
+        '201':
+          description: Invitation sent
+        '403':
+          description: Only admins can invite
+        '400':
+          description: User already invited or in organization
+
+    get:
+      tags: [Invitations]
+      summary: Get pending invitations for current user
+      description: Returns invitations sent to current user's email
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of pending invitations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      format: uuid
+                    email:
+                      type: string
+                    organization_id:
+                      type: string
+                      format: uuid
+                    role:
+                      type: string
+                    status:
+                      type: string
+                    expires_at:
+                      type: string
+                      format: date-time
+
+  /api/v1/invitations/{invitation_id}/accept:
+    post:
+      tags: [Invitations]
+      summary: Accept invitation
+      description: |
+        Joins the organization with specified role.
+        ⚠️ User must not already be in another organization.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: invitation_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Invitation accepted, user now in organization
+        '400':
+          description: User already in organization or invitation expired
+        '404':
+          description: Invitation not found
+
+  /api/v1/invitations/{invitation_id}/reject:
+    post:
+      tags: [Invitations]
+      summary: Reject invitation
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: invitation_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Invitation rejected
+
+# ============================================
+# LAB ENDPOINTS (Research Service)
+# ============================================
+
+  /api/v1/labs:
+    post:
+      tags: [Labs]
+      summary: Create lab in organization
+      description: |
+        ⚠️ Only admins can create labs.
+        Creates lab in user's organization.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, description, head_id]
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                domain:
+                  type: string
+                head_id:
+                  type: string
+                  format: uuid
+                  description: Must be org member
+      responses:
+        '201':
+          description: Lab created
+        '403':
+          description: Only admins can create labs
+        '400':
+          description: Head must be in organization
+
+    get:
+      tags: [Labs]
+      summary: List labs in user's organization
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of labs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+
+  /api/v1/labs/{lab_id}:
+    get:
+      tags: [Labs]
+      summary: Get lab details
+      description: Returns lab details if user is in the lab's organization
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: lab_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Lab details
+        '403':
+          description: Not authorized to view this lab
+
+  /api/v1/labs/{lab_id}/researchers:
+    post:
+      tags: [Labs]
+      summary: Add researcher to lab
+      description: |
+        ⚠️ Only lab head or admin can add researchers.
+        Links existing org user to lab as researcher.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: lab_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [user_id, field]
+              properties:
+                user_id:
+                  type: string
+                  format: uuid
+                  description: Must be org member
+                field:
+                  type: string
+                  description: Research field/specialization
+                status:
+                  type: string
+                  enum: [pending, active]
+                  default: pending
+      responses:
+        '201':
+          description: Researcher added to lab
+        '403':
+          description: Only lab head or admin can add researchers
+        '400':
+          description: User not in organization or already in lab
+
+    get:
+      tags: [Labs]
+      summary: List researchers in lab
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: lab_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: List of researchers
+
+  /api/v1/labs/{lab_id}/collaborations:
+    get:
+      tags: [Labs]
+      summary: Get collaboration suggestions for lab
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: lab_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: List of collaboration opportunities
+
+# ============================================
+# PROJECT ENDPOINTS (Atlas Service)
+# ============================================
+
+  /api/v1/projects:
+    post:
+      tags: [Projects]
+      summary: Create project
+      description: |
+        ⚠️ Only admin or manager can create projects.
+        Creates project in user's organization.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                lab_id:
+                  type: string
+                  format: uuid
+                  nullable: true
+                  description: Optional lab link
+      responses:
+        '201':
+          description: Project created
+        '403':
+          description: Only admin or manager can create projects
+        '400':
+          description: Lab not in organization (if lab_id provided)
+
+    get:
+      tags: [Projects]
+      summary: List projects in user's organization
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: lab_id
+          in: query
+          required: false
+          schema:
+            type: string
+            format: uuid
+          description: Filter by lab
+      responses:
+        '200':
+          description: List of projects
+
+  /api/v1/projects/{project_id}:
+    get:
+      tags: [Projects]
+      summary: Get project details
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Project details with tasks
+        '403':
+          description: Not authorized to view this project
+
+  /api/v1/projects/{project_id}/tasks:
+    post:
+      tags: [Projects]
+      summary: Create task in project
+      description: |
+        ⚠️ Only admin or manager can create tasks.
+        Assigns task to org member.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [title]
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                assignee_id:
+                  type: string
+                  format: uuid
+                  nullable: true
+                  description: Must be org member
+                due_date:
+                  type: string
+                  format: date
+                status:
+                  type: string
+                  enum: [To Do, In Progress, Done]
+                  default: To Do
+      responses:
+        '201':
+          description: Task created
+        '403':
+          description: Only admin or manager can create tasks
+        '400':
+          description: Assignee not in organization
+
+    get:
+      tags: [Projects]
+      summary: List tasks in project
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: List of tasks
+
+  /api/v1/tasks/{task_id}:
+    patch:
+      tags: [Projects]
+      summary: Update task
+      description: Assignee or creator can update task
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                status:
+                  type: string
+                  enum: [To Do, In Progress, Done]
+                progress_percentage:
+                  type: integer
+                  minimum: 0
+                  maximum: 100
+      responses:
+        '200':
+          description: Task updated
+        '403':
+          description: Not authorized to update this task
+
+# ============================================
+# ACTIVITY LOGGING (WorkPulse Service)
+# ============================================
+
+  /api/v1/activities:
+    post:
+      tags: [Activities]
+      summary: Log activity
+      description: Log work activity with optional task link
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [description, duration_seconds]
+              properties:
+                description:
+                  type: string
+                duration_seconds:
+                  type: integer
+                  minimum: 0
+                task_id:
+                  type: string
+                  format: uuid
+                  nullable: true
+                logged_date:
+                  type: string
+                  format: date
+      responses:
+        '201':
+          description: Activity logged
+        '400':
+          description: Task not in user's organization (if task_id provided)
+
+    get:
+      tags: [Activities]
+      summary: Get user's activities
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: start_date
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: end_date
+          in: query
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: List of activities
+
+  /api/v1/activities/team:
+    get:
+      tags: [Activities]
+      summary: Get team activities
+      description: ⚠️ Only admin or manager can view team activities
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: start_date
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: end_date
+          in: query
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: Team activity summary
+        '403':
+          description: Insufficient permissions
+
+# ============================================
+# TEAMS (WorkPulse Service)
+# ============================================
+
+  /api/v1/teams:
+    post:
+      tags: [Teams]
+      summary: Create team
+      description: ⚠️ Only admin or manager can create teams
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                leader_id:
+                  type: string
+                  format: uuid
+                  nullable: true
+                  description: Must be org member
+      responses:
+        '201':
+          description: Team created
+        '403':
+          description: Only admin or manager can create teams
+
+    get:
+      tags: [Teams]
+      summary: List teams in organization
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of teams
+
+  /api/v1/teams/{team_id}/members:
+    post:
+      tags: [Teams]
+      summary: Add member to team
+      description: ⚠️ Only admin, manager, or team leader can add members
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: team_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [user_id]
+              properties:
+                user_id:
+                  type: string
+                  format: uuid
+                  description: Must be org member
+                role:
+                  type: string
+                  enum: [member, lead]
+                  default: member
+      responses:
+        '201':
+          description: Member added to team
+        '403':
+          description: Insufficient permissions
+        '400':
+          description: User not in organization or already in team
+
+# ============================================
+# PERFORMANCE (EPR Service)
+# ============================================
+
+  /api/v1/performance/users/{user_id}/reviews:
+    post:
+      tags: [Performance]
+      summary: Create performance review
+      description: ⚠️ Only admin or manager can create reviews
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [rating, review_period_start, review_period_end]
+              properties:
+                rating:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                comments:
+                  type: string
+                review_period_start:
+                  type: string
+                  format: date
+                review_period_end:
+                  type: string
+                  format: date
+      responses:
+        '201':
+          description: Review created
+        '403':
+          description: Only admin or manager can review
+        '400':
+          description: User not in organization or cannot review self
+
+    get:
+      tags: [Performance]
+      summary: Get performance reviews
+      description: Users can see own reviews, managers can see team reviews
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: List of reviews
+        '403':
+          description: Cannot view other user's reviews
+
+  /api/v1/performance/users/{user_id}/goals:
+    post:
+      tags: [Performance]
+      summary: Create performance goal
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [title, target_date]
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                target_date:
+                  type: string
+                  format: date
+      responses:
+        '201':
+          description: Goal created
+
+    get:
+      tags: [Performance]
+      summary: Get performance goals
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: List of goals
+
+  /api/v1/performance/users/{user_id}/feedback:
+    post:
+      tags: [Performance]
+      summary: Give peer feedback
+      description: Any org member can give feedback to another
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [feedback]
+              properties:
+                feedback:
+                  type: string
+                is_anonymous:
+                  type: boolean
+                  default: false
+      responses:
+        '201':
+          description: Feedback submitted
+        '400':
+          description: Cannot give feedback to self or user not in organization
+
+    get:
+      tags: [Performance]
+      summary: Get peer feedback
+      description: Users can see own feedback, managers can see team feedback
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: List of feedback
+
+# ============================================
+# DASHBOARD & ANALYTICS
+# ============================================
+
+  /api/v1/dashboard:
+    get:
+      tags: [Dashboard]
+      summary: Get unified dashboard
+      description: Returns personalized dashboard based on user role
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Dashboard data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    type: object
+                    description: User info and role
+                  organization:
+                    type: object
+                    description: Organization details
+                  projects:
+                    type: array
+                    description: User's projects
+                  tasks:
+                    type: array
+                    description: Tasks assigned to user
+                  activities:
+                    type: object
+                    description: Recent activities
+                  performance:
+                    type: object
+                    description: Performance metrics
+                  team_stats:
+                    type: object
+                    description: Team statistics (if manager/admin)
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Error:
+      type: object
+      properties:
+        detail:
+          type: string
+        code:
+          type: string

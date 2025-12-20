@@ -56,3 +56,22 @@ class OrganizationResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class InvitationCreate(BaseModel):
+    email: EmailStr
+    organization_id: str
+    role: str = "member"  # admin, manager, member, researcher, developer
+
+
+class InvitationResponse(BaseModel):
+    id: str
+    email: str
+    organization_id: str
+    role: str
+    status: str  # pending, accepted, rejected
+    invited_by: str
+    created_at: str
+
+    class Config:
+        from_attributes = True

@@ -1,0 +1,85 @@
+# Git
+.git
+.gitignore
+
+# Python virtual environments (MOST IMPORTANT - these are huge)
+venv/
+env/
+.venv/
+*/venv/
+*/env/
+*/.venv/
+services/*/venv/
+services/*/.venv/
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Documentation
+*.md
+docs/
+
+# Tests
+tests/
+test_*.py
+*_test.py
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Node (if any frontend)
+node_modules/
+npm-debug.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+htmlcov/
+
+# Large directories
+.git/
+.tox/
+.coverage/

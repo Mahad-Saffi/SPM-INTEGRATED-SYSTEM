@@ -75,7 +75,7 @@ async def get_current_user(token = Depends(security)) -> Dict[str, Any]:
         raise HTTPException(status_code=401, detail="Invalid token")
 
 
-def create_user_token(user_id: str, email: str, name: str, role: str = "member") -> str:
+def create_user_token(user_id: str, email: str, name: str, role: str = "member", organization_id: str = None) -> str:
     """Create token for a user"""
     token_data = {
         "sub": user_id,
@@ -83,6 +83,8 @@ def create_user_token(user_id: str, email: str, name: str, role: str = "member")
         "name": name,
         "role": role
     }
+    if organization_id:
+        token_data["organization_id"] = organization_id
     return create_access_token(token_data)
 
 

@@ -193,3 +193,34 @@ async def get_user_organizations(
     except Exception as e:
         logger.error(f"Error getting user organizations: {str(e)}")
         return []
+
+
+class ProjectCreateRequest(BaseModel):
+    name: str
+    description: str = ""
+    owner_id: str
+    organization_id: str
+    lab_id: int = None
+
+
+@router.post("/projects")
+async def create_project_internal(
+    project_data: ProjectCreateRequest,
+    _: bool = Depends(verify_service_token)
+):
+    """Create a project (internal endpoint)"""
+    try:
+        from app.services.project_service import project_service
+        
+        project = await project_service.create_project(
+            name=project_data.name,
+            description=project_data.description,
+            owner_id=project_data.owner_id,
+            organization_id=project_data.organization_id,
+            lab_id=project_data.lab_id
+        )
+        return project
+            
+    except Exception as e:
+        logger.error(f"Error creating project: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to create project: {str(e)}")

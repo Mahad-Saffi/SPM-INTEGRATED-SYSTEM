@@ -12,8 +12,11 @@ config = Config(env_path if os.path.exists(env_path) else ".env")
 
 # PostgreSQL with atlas schema
 DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "postgresql+asyncpg://admin:secure_password@localhost:5432/project_management"
+    "ATLAS_DATABASE_URL",
+    os.getenv(
+        "DATABASE_URL",
+        "postgresql+asyncpg://admin:admin123@localhost:5432/atlas"
+    )
 )
 
 engine = create_async_engine(
